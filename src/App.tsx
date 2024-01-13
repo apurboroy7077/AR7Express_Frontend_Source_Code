@@ -1,6 +1,5 @@
-import { useState } from "react";
 import TheRouter from "./TheRouter";
-
+import "./index.css";
 function App() {
   return (
     <>

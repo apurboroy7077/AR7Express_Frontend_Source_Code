@@ -1,7 +1,5 @@
-import React from "react";
-
 const Homepage = () => {
-  return <div>Homepage</div>;
+  return <div className="text-2xl text-red-500">Homepage</div>;
 };
 
 export default Homepage;
