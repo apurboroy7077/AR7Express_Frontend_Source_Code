@@ -1,9 +1,11 @@
+import TheCarousal1 from "../components/TheCarousal1";
 import TheNavbar from "../components/TheNavbar";
 
 const Homepage = () => {
   return (
     <>
       <TheNavbar />
+      <TheCarousal1 />
     </>
   );
 };
