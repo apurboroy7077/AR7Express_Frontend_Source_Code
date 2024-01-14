@@ -1,5 +1,11 @@
+import TheNavbar from "../components/TheNavbar";
+
 const Homepage = () => {
-  return <div className="text-2xl text-red-500">Homepage</div>;
+  return (
+    <>
+      <TheNavbar />
+    </>
+  );
 };
 
 export default Homepage;
