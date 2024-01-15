@@ -1,5 +1,5 @@
 import ar7id from "ar7id";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const TheCarousal1 = () => {
   let [currentImageIndex, setCurrentImageIndex] = useState(1);
