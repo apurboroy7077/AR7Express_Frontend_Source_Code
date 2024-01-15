@@ -1,24 +1,32 @@
-const TopPicks = () => {
+import ar7id from "ar7id";
+
+type propsType = {
+  data: {
+    title: string;
+    productDescription: string;
+    price: string;
+    imageSrc: string;
+  };
+};
+
+const TopPicks = (props: propsType) => {
+  let { title, productDescription, price, imageSrc } = props.data;
   return (
     <div className=" p-3 ">
-      <div className=" font-bold">Top Picks for Bangladesh</div>
+      <div className=" font-bold">{title}</div>
 
       {Array.from({ length: 3 }).map(() => {
         return (
-          <div className="mt-3 ml-3">
+          <div className="mt-3 ml-3" key={ar7id()}>
             <div className="flex">
               <div className="min-w-[25%]">
-                <img
-                  src="/images/products/food_warmer.jpg"
-                  className="w-full"
-                />
+                <img src={imageSrc} className="w-full" />
               </div>
               <div className="ml-3">
-                <div className=" text-sm text-xs font-medium">
-                  VEVOR Commercial Food Warmer Display, 3 Tiers, 800W Pizza
-                  Warmer w/ 3D Heat… Our favorite Toys
+                <div className="  text-xs font-medium">
+                  {productDescription}
                 </div>
-                <div className="font-medium">$298.99</div>
+                <div className="font-medium">{price}</div>
               </div>
             </div>
           </div>

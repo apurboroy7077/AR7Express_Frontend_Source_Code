@@ -33,7 +33,11 @@ let electronicsSection = {
   productName: "",
   imageSrc: "/images/products/battery.jpg",
 };
-
+let exploreDepartmentSectionData = {
+  title: "Explore Departments",
+  productName: "Pet Supplies",
+  imageSrc: "/images/products/pet_supplies.jpg",
+};
 export {
   shoesTrendsSectionData,
   shoesUnder60Dollar,
@@ -42,4 +46,5 @@ export {
   tabletTrendsSection,
   favouriteToysSection,
   electronicsSection,
+  exploreDepartmentSectionData,
 };

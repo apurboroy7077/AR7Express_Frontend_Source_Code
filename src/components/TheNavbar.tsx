@@ -1,7 +1,7 @@
 const TheNavbar = () => {
   return (
     <>
-      <div className="bg-slate-900 p-2 max-w-full">
+      <div className="the_navbar bg-slate-900 p-2 max-w-full">
         <div className="flex items-center justify-between   text-white">
           <div className="flex items-center">
             <div>
