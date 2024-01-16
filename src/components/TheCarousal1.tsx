@@ -17,6 +17,11 @@ const TheCarousal1 = () => {
   };
   let handleOnClick = () => {};
 
+  useEffect(() => {
+    setTimeout(() => {
+      handleTouchEnd();
+    }, 5000);
+  }, [currentImageIndex]);
   return (
     <div
       className="w-full h-[300px] duration-1000 bg-cover bg-center relative"

@@ -30,34 +30,40 @@ import {
 const Homepage = () => {
   return (
     <>
-      <TheNavbar />
-      <TheCarousal1 />
-      <SignInMessage />
-      <TheHr />
-      <FashionInTrends data={shoesTrendsSectionData} />
-      <TheHr />
-      <FashionInTrends data={shoesUnder60Dollar} />
-      <TheBoldHr />
-      <ShopAccessories data={shopComputersAccessoriesData} />
-      <TheBoldHr />
-      <FashionInTrends data={clothTrendsSection} />
-      <TheHr />
-      <FashionInTrends data={womenSneakersTrendsSection} />
-      <TheHr />
-      <FashionInTrends data={tabletTrendsSection} />
-      <TheHr />
-      <TopPicks data={topPicksForBangladeshData} />
-      <TheHr />
-      <FashionInTrends data={favouriteToysSection} />
-      <TheHr />
-      <FashionInTrends data={electronicsSection} />
-      <TheBoldHr />
-      <ShopAccessories data={shopCycleAccessoriesData} />
-      <TheBoldHr />
-      <TopPicks data={topPicksProductsInternationallyData} />
-      <EndMessage />
-      <FashionInTrends data={exploreDepartmentSectionData} />
-      <TheFooter />
+      <header>
+        <TheNavbar />
+      </header>
+      <main>
+        <TheCarousal1 />
+        <SignInMessage />
+        <TheHr />
+        <FashionInTrends data={shoesTrendsSectionData} />
+        <TheHr />
+        <FashionInTrends data={shoesUnder60Dollar} />
+        <TheBoldHr />
+        <ShopAccessories data={shopComputersAccessoriesData} />
+        <TheBoldHr />
+        <FashionInTrends data={clothTrendsSection} />
+        <TheHr />
+        <FashionInTrends data={womenSneakersTrendsSection} />
+        <TheHr />
+        <FashionInTrends data={tabletTrendsSection} />
+        <TheHr />
+        <TopPicks data={topPicksForBangladeshData} />
+        <TheHr />
+        <FashionInTrends data={favouriteToysSection} />
+        <TheHr />
+        <FashionInTrends data={electronicsSection} />
+        <TheBoldHr />
+        <ShopAccessories data={shopCycleAccessoriesData} />
+        <TheBoldHr />
+        <TopPicks data={topPicksProductsInternationallyData} />
+        <EndMessage />
+        <FashionInTrends data={exploreDepartmentSectionData} />
+      </main>
+      <footer>
+        <TheFooter />
+      </footer>
     </>
   );
 };
