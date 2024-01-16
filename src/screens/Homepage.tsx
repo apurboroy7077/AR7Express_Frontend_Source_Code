@@ -1,5 +1,6 @@
 import EndMessage from "../components/EndMessage";
 import FashionInTrends from "../components/FashionInTrends";
+import HomePageCarouselForLargerScreens from "../components/HomePageCarouselForLargerScreens";
 import ShopAccessories from "../components/ShopAccessories";
 import SignInMessage from "../components/SignInMessage";
 import TheBoldHr from "../components/TheBoldHr";
@@ -35,6 +36,7 @@ const Homepage = () => {
       </header>
       <main>
         <TheCarousal1 />
+        <HomePageCarouselForLargerScreens />
         <SignInMessage />
         <TheHr />
         <FashionInTrends data={shoesTrendsSectionData} />
