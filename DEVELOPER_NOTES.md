@@ -7,3 +7,5 @@
 7. Added Sign in Section of Homepage.
 8. Added Trends Section and Top Pick Section in Homepage. Date: 15/1/2024, Monday.
 9. Added Footer. Date: 15/1/2024, Monday.
+10. Added Responsiveness to Navbar, Date 16/1/2024, Tuesday.
+11. Date 17/1/2024, Wednesday, Added Carousel for Larger Screens with Swiper and made a Product Section for larger screens which is used inside the large Screen Carousel and Also outside it. Experimented with lots of Carousel Packages like react-responsive-carousel, swiper and more. Finally Chose Swiper for making carousel for larger Screens.

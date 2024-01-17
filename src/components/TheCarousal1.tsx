@@ -24,7 +24,7 @@ const TheCarousal1 = () => {
   }, [currentImageIndex]);
   return (
     <div
-      className="w-full h-[300px] duration-1000 bg-cover bg-center relative"
+      className="w-full h-[300px] duration-1000 bg-cover bg-center relative lg:hidden"
       style={{
         backgroundImage: `url(/images/carousals/dino_${currentImageIndex}.jpg)`,
       }}

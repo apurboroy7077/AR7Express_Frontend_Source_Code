@@ -1,6 +1,10 @@
+import BackgroundFilterBlack from "../components/BackgroundFilterBlack";
 import EndMessage from "../components/EndMessage";
 import FashionInTrends from "../components/FashionInTrends";
 import HomePageCarouselForLargerScreens from "../components/HomePageCarouselForLargerScreens";
+import HomepageCarouselLargeScreen from "../components/HomepageCarouselLargeScreen";
+import LargerScreenSection1 from "../components/LargerScreenSection1";
+import LargerScreenSection1Type2 from "../components/LargerScreenSection1Type2";
 import ShopAccessories from "../components/ShopAccessories";
 import SignInMessage from "../components/SignInMessage";
 import TheBoldHr from "../components/TheBoldHr";
@@ -9,6 +13,10 @@ import TheFooter from "../components/TheFooter";
 import TheHr from "../components/TheHr";
 import TheNavbar from "../components/TheNavbar";
 import TopPicks from "../components/TopPicks";
+import {
+  largerSectionData1,
+  largerSectionData2,
+} from "../models/LargerSectionData";
 import {
   shopComputersAccessoriesData,
   shopCycleAccessoriesData,
@@ -34,9 +42,13 @@ const Homepage = () => {
       <header>
         <TheNavbar />
       </header>
-      <main>
+      <main className="relative lg:bg-zinc-200">
+        <BackgroundFilterBlack />
         <TheCarousal1 />
-        <HomePageCarouselForLargerScreens />
+        {/* <HomePageCarouselForLargerScreens /> */}
+        <HomepageCarouselLargeScreen />
+        <LargerScreenSection1Type2 data={largerSectionData1} />
+        <LargerScreenSection1Type2 data={largerSectionData2} />
         <SignInMessage />
         <TheHr />
         <FashionInTrends data={shoesTrendsSectionData} />

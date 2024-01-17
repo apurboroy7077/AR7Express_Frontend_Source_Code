@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const SignInMessage = () => {
   return (
-    <div className="p-3">
+    <div className="p-3 lg:hidden">
       <div className="font-bold text-lg mb-2">
         Sign in for the Best Experience
       </div>

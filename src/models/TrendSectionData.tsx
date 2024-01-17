@@ -38,7 +38,45 @@ let exploreDepartmentSectionData = {
   productName: "Pet Supplies",
   imageSrc: "/images/products/pet_supplies.jpg",
 };
+let largeScreenClothSectionData = {
+  title: "Shop Deals in Fashion",
+  productName: "Tops Under $25",
+  imageSrc: "/images/products/shirt_pant_tops.png",
+};
+let largeScreenSingleProductSectionData = {
+  title: "Deals in PC",
+  productName: "Shop Now",
+  imageSrc: "/images/products/colorful_soundbox.jpg",
+};
+let largeScreenToySectionData = {
+  title: "Deals in PC",
+  productName: "Shop Now",
+  imageSrc: "/images/products/teddy_bear.jpg",
+};
+let lunarNewYearSectionData = {
+  title: "Lunar New Year",
+  productName: "",
+  imageSrc: "/images/products/lunar_new_year.jpg",
+};
+let computerGirlSectionData = {
+  title: "Computer Girl",
+  productName: "",
+  imageSrc: "/images/products/computer_girl.jpg",
+};
+let redShirtSectionData = {
+  title: "Fashion you would like",
+  productName: "Fancy Shirt",
+  imageSrc: "/images/products/red_shirt.jpg",
+};
+let diningSectionData = {
+  title: "Refresh Your Space",
+  productName: "Dining",
+  imageSrc: "/images/products/dining.jpg",
+};
 export {
+  computerGirlSectionData,
+  redShirtSectionData,
+  diningSectionData,
   shoesTrendsSectionData,
   shoesUnder60Dollar,
   clothTrendsSection,
@@ -47,4 +85,8 @@ export {
   favouriteToysSection,
   electronicsSection,
   exploreDepartmentSectionData,
+  largeScreenClothSectionData,
+  largeScreenSingleProductSectionData,
+  largeScreenToySectionData,
+  lunarNewYearSectionData,
 };

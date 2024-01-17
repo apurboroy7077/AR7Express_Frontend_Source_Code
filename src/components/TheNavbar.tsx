@@ -1,7 +1,15 @@
 const TheNavbar = () => {
   let handleSearchBarFocus = () => {
-    let mainSection = document.getElementsByTagName("main")[0];
-    mainSection.classList.add("opacity-50");
+    let theBlackDiv = document.getElementsByClassName(
+      "background_filter_black_div"
+    )[0];
+    theBlackDiv.classList.remove("hidden");
+  };
+  let handleSearchBarFocusOut = () => {
+    let theBlackDiv = document.getElementsByClassName(
+      "background_filter_black_div"
+    )[0];
+    theBlackDiv.classList.add("hidden");
   };
   return (
     <>
@@ -29,6 +37,7 @@ const TheNavbar = () => {
               className="p-1 w-full mt-1 rounded outline-none text-black pt-2 pb-2 pl-[60px]"
               placeholder="Search Amazon"
               onFocus={handleSearchBarFocus}
+              onBlur={handleSearchBarFocusOut}
             />
             <select className="text-black absolute bg-slate-300 left-0 top-[4px] rounded-l-lg p-[8.5px]">
               <option className="bg-white">Hi</option>
