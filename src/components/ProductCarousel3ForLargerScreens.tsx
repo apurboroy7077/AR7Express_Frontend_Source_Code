@@ -21,7 +21,10 @@ let ProductCarousel3ForLargerScreens = () => {
     // progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
   return (
-    <div className="hidden lg:block  bg-white m-[1vw] p-[1vw]">
+    <div className="hidden lg:block  bg-white m-[1vw] p-[1vw] pb-[1.2vw]">
+      <div className="text-[1.2vw] font-bold mb-[0.8vw]">
+        Deals on electronics, gadgets & accessories
+      </div>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
