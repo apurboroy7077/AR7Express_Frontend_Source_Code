@@ -14,4 +14,6 @@
     1. Choose React Slick to do the Job.
     2. Had some Problems importing slick in Typescript, Used npm install react-slick slick-carousel @types/react-slick to install and got rid of that problem.
     3. Created a Extra Css file to import css of React Slick. Went to their css cdn website to copy and paste their css in that css file. After that, I pasted it on the css file I made.
-       4.Used Variables Width slider of react slick with Major Changes, Used AutoPlay Features With it.
+    4. Used Variables Width slider of react slick with Major Changes, Used AutoPlay Features With it.
+    5. Turned React Slick Class into Components.
+       6.Added Another Product Section for Larger Screen Using Swiper.

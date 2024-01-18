@@ -4,6 +4,7 @@ import EndMessage from "../components/EndMessage";
 import FashionInTrends from "../components/FashionInTrends";
 import HomepageCarouselLargeScreen from "../components/HomepageCarouselLargeScreen";
 import LargerScreenSection1Type2 from "../components/LargerScreenSection1Type2";
+import ProductCarousel3ForLargerScreens from "../components/ProductCarousel3ForLargerScreens";
 import ShopAccessories from "../components/ShopAccessories";
 import SignInMessage from "../components/SignInMessage";
 import TheBoldHr from "../components/TheBoldHr";
@@ -44,6 +45,7 @@ const Homepage = () => {
         {/* <HomePageCarouselForLargerScreens /> */}
         <HomepageCarouselLargeScreen />
         <LargerScreenSection1Type2 data={largerSectionData2} />
+        <ProductCarousel3ForLargerScreens />
         <BooksSliderForLargeScreens />
         <SignInMessage />
         <div className="lg:hidden">
