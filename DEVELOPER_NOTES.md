@@ -9,3 +9,9 @@
 9. Added Footer. Date: 15/1/2024, Monday.
 10. Added Responsiveness to Navbar, Date 16/1/2024, Tuesday.
 11. Date 17/1/2024, Wednesday, Added Carousel for Larger Screens with Swiper and made a Product Section for larger screens which is used inside the large Screen Carousel and Also outside it. Experimented with lots of Carousel Packages like react-responsive-carousel, swiper and more. Finally Chose Swiper for making carousel for larger Screens.
+12. Date 18/1/2024, Thursday
+    Planned to Add Books Section for larger Screens.
+    1. Choose React Slick to do the Job.
+    2. Had some Problems importing slick in Typescript, Used npm install react-slick slick-carousel @types/react-slick to install and got rid of that problem.
+    3. Created a Extra Css file to import css of React Slick. Went to their css cdn website to copy and paste their css in that css file. After that, I pasted it on the css file I made.
+       4.Used Variables Width slider of react slick with Major Changes, Used AutoPlay Features With it.

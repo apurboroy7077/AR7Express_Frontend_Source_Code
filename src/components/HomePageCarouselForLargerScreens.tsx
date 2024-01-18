@@ -37,7 +37,7 @@ const HomePageCarouselForLargerScreens = () => {
         <button
           type="button"
           aria-label="next slide / item"
-          class="control-arrow control-next"
+          className="control-arrow control-next"
         ></button>
       </Carousel>
     </>

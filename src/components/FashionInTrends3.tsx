@@ -4,7 +4,7 @@ type propsType = {
   data: { title: string; productName: string; imageSrc: string };
 };
 const FashionInTrends3 = (props: propsType) => {
-  let { title, productName, imageSrc } = props.data;
+  let { title, imageSrc } = props.data;
 
   return (
     <div className="p-3 pl-7 pr-7 w-[23%] bg-white">

@@ -1,9 +1,8 @@
 import BackgroundFilterBlack from "../components/BackgroundFilterBlack";
+import BooksSliderForLargeScreens from "../components/BooksSliderForLargeScreens";
 import EndMessage from "../components/EndMessage";
 import FashionInTrends from "../components/FashionInTrends";
-import HomePageCarouselForLargerScreens from "../components/HomePageCarouselForLargerScreens";
 import HomepageCarouselLargeScreen from "../components/HomepageCarouselLargeScreen";
-import LargerScreenSection1 from "../components/LargerScreenSection1";
 import LargerScreenSection1Type2 from "../components/LargerScreenSection1Type2";
 import ShopAccessories from "../components/ShopAccessories";
 import SignInMessage from "../components/SignInMessage";
@@ -13,10 +12,7 @@ import TheFooter from "../components/TheFooter";
 import TheHr from "../components/TheHr";
 import TheNavbar from "../components/TheNavbar";
 import TopPicks from "../components/TopPicks";
-import {
-  largerSectionData1,
-  largerSectionData2,
-} from "../models/LargerSectionData";
+import { largerSectionData2 } from "../models/LargerSectionData";
 import {
   shopComputersAccessoriesData,
   shopCycleAccessoriesData,
@@ -47,33 +43,35 @@ const Homepage = () => {
         <TheCarousal1 />
         {/* <HomePageCarouselForLargerScreens /> */}
         <HomepageCarouselLargeScreen />
-        <LargerScreenSection1Type2 data={largerSectionData1} />
         <LargerScreenSection1Type2 data={largerSectionData2} />
+        <BooksSliderForLargeScreens />
         <SignInMessage />
-        <TheHr />
-        <FashionInTrends data={shoesTrendsSectionData} />
-        <TheHr />
-        <FashionInTrends data={shoesUnder60Dollar} />
-        <TheBoldHr />
-        <ShopAccessories data={shopComputersAccessoriesData} />
-        <TheBoldHr />
-        <FashionInTrends data={clothTrendsSection} />
-        <TheHr />
-        <FashionInTrends data={womenSneakersTrendsSection} />
-        <TheHr />
-        <FashionInTrends data={tabletTrendsSection} />
-        <TheHr />
-        <TopPicks data={topPicksForBangladeshData} />
-        <TheHr />
-        <FashionInTrends data={favouriteToysSection} />
-        <TheHr />
-        <FashionInTrends data={electronicsSection} />
-        <TheBoldHr />
-        <ShopAccessories data={shopCycleAccessoriesData} />
-        <TheBoldHr />
-        <TopPicks data={topPicksProductsInternationallyData} />
-        <EndMessage />
-        <FashionInTrends data={exploreDepartmentSectionData} />
+        <div className="lg:hidden">
+          <TheHr />
+          <FashionInTrends data={shoesTrendsSectionData} />
+          <TheHr />
+          <FashionInTrends data={shoesUnder60Dollar} />
+          <TheBoldHr />
+          <ShopAccessories data={shopComputersAccessoriesData} />
+          <TheBoldHr />
+          <FashionInTrends data={clothTrendsSection} />
+          <TheHr />
+          <FashionInTrends data={womenSneakersTrendsSection} />
+          <TheHr />
+          <FashionInTrends data={tabletTrendsSection} />
+          <TheHr />
+          <TopPicks data={topPicksForBangladeshData} />
+          <TheHr />
+          <FashionInTrends data={favouriteToysSection} />
+          <TheHr />
+          <FashionInTrends data={electronicsSection} />
+          <TheBoldHr />
+          <ShopAccessories data={shopCycleAccessoriesData} />
+          <TheBoldHr />
+          <TopPicks data={topPicksProductsInternationallyData} />
+          <EndMessage />
+          <FashionInTrends data={exploreDepartmentSectionData} />
+        </div>
       </main>
       <footer>
         <TheFooter />

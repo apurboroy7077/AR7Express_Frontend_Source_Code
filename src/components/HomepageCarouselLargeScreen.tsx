@@ -1,4 +1,3 @@
-import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -9,13 +8,14 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import { largerSectionData1 } from "../models/LargerSectionData";
+import {
+  largerSectionData1,
+  largerSectionData2,
+} from "../models/LargerSectionData";
 import LargerScreenSection1Type2 from "./LargerScreenSection1Type2";
 
 let HomepageCarouselLargeScreen = () => {
-  const progressCircle = useRef(null);
-  const progressContent = useRef(null);
-  const onAutoplayTimeLeft = (s, time, progress) => {
+  const onAutoplayTimeLeft = () => {
     // progressCircle.current.style.setProperty("--progress", 1 - progress);
     // progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
@@ -52,7 +52,7 @@ let HomepageCarouselLargeScreen = () => {
           }}
         >
           {" "}
-          <LargerScreenSection1Type2 data={largerSectionData1} />
+          <LargerScreenSection1Type2 data={largerSectionData2} />
         </SwiperSlide>
         <SwiperSlide
           className="pt-[200px] bg-cover bg-center"
