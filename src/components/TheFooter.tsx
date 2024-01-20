@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import TheHr from "./TheHr";
 
 const TheFooter = () => {
   let navbar: HTMLElement | undefined;
@@ -13,16 +14,18 @@ const TheFooter = () => {
   };
   return (
     <>
+      {/* FOR BOTH SCREENS------------------------------------------------------------------------------------------------------------------ */}
       <div
-        className=" text-center bg-slate-700 text-white pt-1 pb-2"
+        className=" text-center bg-slate-700 text-white pt-1 pb-2 lg:text-[1vw]"
         onClick={handleGoToTop}
       >
         <div>
           <i className="fa-solid fa-circle-up" />
         </div>
-        <div className="text-xs font-bold">TOP OF PAGE</div>
+        <div className="text-xs font-bold lg:text-[0.7vw]">TOP OF PAGE</div>
       </div>
-      <div className="flex justify-around bg-slate-800 text-white pt-3 pb-3">
+      {/* FOR SMALLER SCREENS-------------------------------------------------------------------------------------------------- */}
+      <div className="flex justify-around bg-slate-800 text-white pt-3 pb-3 lg:hidden ">
         <div className="w-2/5 flex flex-col gap-3">
           <div>
             <Link to="/">Amazon.com</Link>
@@ -58,6 +61,110 @@ const TheFooter = () => {
           </div>
           <div>
             <Link to="/">Customer Service</Link>
+          </div>
+        </div>
+      </div>
+
+      {/* FOR BIGGER SCREENS----------------------------------------------------------------------------------------------------------------- */}
+      <div className="hidden lg:flex justify-around bg-slate-800 text-white pt-3 pb-3 text-[1vw] font-medium">
+        <div className="w-[10vw] flex flex-col gap-3 ">
+          <div>
+            <Link to="/">Amazon.com</Link>
+          </div>
+          <div>
+            <Link to="/">Your Lists</Link>
+          </div>
+          <div>
+            <Link to="/">Find a Gift</Link>
+          </div>
+          <div>
+            <Link to="/">Browsing History</Link>
+          </div>
+          <div>
+            <Link to="/">Returns</Link>
+          </div>
+        </div>
+        <div className="w-[10vw] flex flex-col gap-3">
+          <div>
+            <Link to="/">Your Orders</Link>
+          </div>
+          <div>
+            <Link to="/">Gift Cards & Registry</Link>
+          </div>
+          <div>
+            <Link to="/">Your Account</Link>
+          </div>
+          <div>
+            <Link to="/">Start Selling with Amazon</Link>
+          </div>
+          <div>
+            <Link to="/">Recalls and Product Safety Alerts</Link>
+          </div>
+          <div>
+            <Link to="/">Customer Service</Link>
+          </div>
+        </div>
+        <div className="w-[10vw] flex flex-col gap-3">
+          <div>
+            <Link to="/">Amazon.com</Link>
+          </div>
+          <div>
+            <Link to="/">Your Lists</Link>
+          </div>
+          <div>
+            <Link to="/">Find a Gift</Link>
+          </div>
+          <div>
+            <Link to="/">Browsing History</Link>
+          </div>
+          <div>
+            <Link to="/">Returns</Link>
+          </div>
+        </div>
+        <div className="w-[10vw] flex flex-col gap-3">
+          <div>
+            <Link to="/">Your Orders</Link>
+          </div>
+          <div>
+            <Link to="/">Gift Cards & Registry</Link>
+          </div>
+          <div>
+            <Link to="/">Your Account</Link>
+          </div>
+          <div>
+            <Link to="/">Start Selling with Amazon</Link>
+          </div>
+          <div>
+            <Link to="/">Recalls and Product Safety Alerts</Link>
+          </div>
+          <div>
+            <Link to="/">Customer Service</Link>
+          </div>
+        </div>
+      </div>
+      <div className="bg-[#3A4553] h-[2px]"></div>
+      <div className="bg-slate-800 p-[3vw] flex justify-center">
+        <div className="flex items-center gap-[3vw]">
+          <div className="text-white text-[2.3vw]">
+            <i className="fa-brands fa-amazon " />
+          </div>
+          <div className="text-white flex text-[0.9vw] gap-[1vw] ">
+            <div className="border-white border-[0.1vw] p-[0.3vw] pl-[1vw] pr-[3vw] relative rounded  flex items-center">
+              <i className="fa-solid fa-globe mr-[0.5vw]" /> English{" "}
+              <i className="fa-solid fa-caret-up absolute top-[0.6vw] right-[0.5vw]" />
+              <i className="fa-solid fa-caret-down absolute top-[1.1vw] right-[0.5vw]" />
+            </div>
+            <div className="border-white border-[0.1vw] p-[0.3vw] pl-[1vw] pr-[1vw] relative rounded  flex items-center">
+              <i className="fa-solid fa-hand-holding-dollar mr-[0.5vw]" /> USD -
+              U.S Dollar
+            </div>
+            <div className="border-white border-[0.1vw] p-[0.3vw] pl-[1vw] pr-[1vw] relative rounded flex items-center">
+              <img
+                src="/images/logo/bangladesh.png"
+                className="h-[2vw] mr-[0.2vw]"
+              />{" "}
+              English
+            </div>
           </div>
         </div>
       </div>
