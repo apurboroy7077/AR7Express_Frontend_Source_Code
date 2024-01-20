@@ -16,4 +16,6 @@
     3. Created a Extra Css file to import css of React Slick. Went to their css cdn website to copy and paste their css in that css file. After that, I pasted it on the css file I made.
     4. Used Variables Width slider of react slick with Major Changes, Used AutoPlay Features With it.
     5. Turned React Slick Class into Components.
-       6.Added Another Product Section for Larger Screen Using Swiper.
+    6. Added Another Product Section for Larger Screen Using Swiper.
+13. Date 20/1/2024, Saturday
+    1. Added another LargerScreenSection1Type2 in homepage. Added Some Padding to <main> in Homepage.tsx

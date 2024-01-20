@@ -1,11 +1,15 @@
 import {
   computerGirlSectionData,
+  digitalWatchData,
   diningSectionData,
+  gamingMerchandiseData,
   largeScreenSingleProductSectionData,
   largeScreenToySectionData,
   lunarNewYearSectionData,
+  outdoorDecorationData,
   redShirtSectionData,
   shoesTrendsSectionData,
+  videoGameData,
 } from "./TrendSectionData";
 
 let largerSectionData1 = [
@@ -44,4 +48,22 @@ let largerSectionData2 = [
     data: computerGirlSectionData,
   },
 ];
-export { largerSectionData1, largerSectionData2 };
+let largerSectionData3 = [
+  {
+    isSingleProduct: true,
+    data: digitalWatchData,
+  },
+  {
+    isSingleProduct: false,
+    data: outdoorDecorationData,
+  },
+  {
+    isSingleProduct: true,
+    data: videoGameData,
+  },
+  {
+    isSingleProduct: false,
+    data: gamingMerchandiseData,
+  },
+];
+export { largerSectionData1, largerSectionData2, largerSectionData3 };

@@ -73,6 +73,26 @@ let diningSectionData = {
   productName: "Dining",
   imageSrc: "/images/products/dining.jpg",
 };
+let digitalWatchData = {
+  title: "Shop activity trackers and smartwatches",
+  productName: "",
+  imageSrc: "/images/products/digital_watch.jpg",
+};
+let outdoorDecorationData = {
+  title: "Warm & welcoming decor",
+  productName: "Wreath & Garlands",
+  imageSrc: "/images/products/outdoor_decoration.jpg",
+};
+let videoGameData = {
+  title: "Player's paradise starts here",
+  productName: "",
+  imageSrc: "/images/products/video_game.jpg",
+};
+let gamingMerchandiseData = {
+  title: "Gaming merchandise",
+  productName: "",
+  imageSrc: "/images/products/cap.jpg",
+};
 export {
   computerGirlSectionData,
   redShirtSectionData,
@@ -89,4 +109,8 @@ export {
   largeScreenSingleProductSectionData,
   largeScreenToySectionData,
   lunarNewYearSectionData,
+  digitalWatchData,
+  outdoorDecorationData,
+  videoGameData,
+  gamingMerchandiseData,
 };

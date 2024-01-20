@@ -13,7 +13,10 @@ import TheFooter from "../components/TheFooter";
 import TheHr from "../components/TheHr";
 import TheNavbar from "../components/TheNavbar";
 import TopPicks from "../components/TopPicks";
-import { largerSectionData2 } from "../models/LargerSectionData";
+import {
+  largerSectionData2,
+  largerSectionData3,
+} from "../models/LargerSectionData";
 import {
   shopComputersAccessoriesData,
   shopCycleAccessoriesData,
@@ -39,7 +42,7 @@ const Homepage = () => {
       <header>
         <TheNavbar />
       </header>
-      <main className="relative lg:bg-zinc-200">
+      <main className="relative lg:bg-zinc-200 pb-5">
         <BackgroundFilterBlack />
         <TheCarousal1 />
         {/* <HomePageCarouselForLargerScreens /> */}
@@ -47,8 +50,9 @@ const Homepage = () => {
         <LargerScreenSection1Type2 data={largerSectionData2} />
         <ProductCarousel3ForLargerScreens />
         <BooksSliderForLargeScreens />
-        <SignInMessage />
+        <LargerScreenSection1Type2 data={largerSectionData3} />
         <div className="lg:hidden">
+          <SignInMessage />
           <TheHr />
           <FashionInTrends data={shoesTrendsSectionData} />
           <TheHr />
