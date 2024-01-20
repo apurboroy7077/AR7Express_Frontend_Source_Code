@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Acer Monitor",
+    "description": "Acer 21.5 inch Full HD (1920*1080)l...",
+    "price": 74.95,
+    "discountPercentage": 49,
+    "imageSrc": "/images/products/led_tv.jpg"
+  },
+  {
+    "name": "Office Chair",
+    "description": "Upgrade your workspace with the Comfort Plus Ergonomic",
+    "price": 74.95,
+    "discountPercentage": 49,
+    "imageSrc": "/images/products/digital_watch.jpg"
+  },
+  {
+    "name": "Office Chair",
+    "description": "Upgrade your workspace with the Comfort Plus Ergonomic",
+    "price": 74.95,
+    "discountPercentage": 49,
+    "imageSrc": "/images/products/dining.jpg"
+  },
+  {
+    "name": "Shirt Pant",
+    "description": "Upgrade your workspace with the Comfort Plus Ergonomic",
+    "price": 74.95,
+    "discountPercentage": 49,
+    "imageSrc": "/images/products/red_shirt.jpg"
+  },
+  {
+    "name": "Office Chair",
+    "description": "Upgrade your workspace with the Comfort Plus Ergonomic",
+    "price": 74.95,
+    "discountPercentage": 49,
+    "imageSrc": "/images/products/teddy_bear.jpg"
+  },
+  {
+    "name": "Office Chair",
+    "description": "Upgrade your workspace with the Comfort Plus Ergonomic",
+    "price": 74.95,
+    "discountPercentage": 49,
+    "imageSrc": "/images/products/women_shoe.jpg"
+  },
+  {
+    "name": "Office Chair",
+    "description": "Upgrade your workspace with the Comfort Plus Ergonomic",
+    "price": 74.95,
+    "discountPercentage": 49,
+    "imageSrc": "/images/products/cloth.jpg"
+  },
+  {
+    "name": "Office Chair",
+    "description": "Upgrade your workspace with the Comfort Plus Ergonomic",
+    "price": 74.95,
+    "discountPercentage": 49,
+    "imageSrc": "/images/products/office_furniture.jpg"
+  }
+]

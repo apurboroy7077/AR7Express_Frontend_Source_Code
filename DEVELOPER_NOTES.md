@@ -19,3 +19,4 @@
     6. Added Another Product Section for Larger Screen Using Swiper.
 13. Date 20/1/2024, Saturday
     1. Added another LargerScreenSection1Type2 in homepage. Added Some Padding to <main> in Homepage.tsx
+    2. Modified Sign in Component Design for larger Screens and Added it to Homepage for Larger Screens.

@@ -13,6 +13,7 @@ import TheFooter from "../components/TheFooter";
 import TheHr from "../components/TheHr";
 import TheNavbar from "../components/TheNavbar";
 import TopPicks from "../components/TopPicks";
+import productsData from "./../models/ProductsData.json";
 import {
   largerSectionData2,
   largerSectionData3,
@@ -43,14 +44,6 @@ const Homepage = () => {
         <TheNavbar />
       </header>
       <main className="relative lg:bg-zinc-200 pb-5">
-        <BackgroundFilterBlack />
-        <TheCarousal1 />
-        {/* <HomePageCarouselForLargerScreens /> */}
-        <HomepageCarouselLargeScreen />
-        <LargerScreenSection1Type2 data={largerSectionData2} />
-        <ProductCarousel3ForLargerScreens />
-        <BooksSliderForLargeScreens />
-        <LargerScreenSection1Type2 data={largerSectionData3} />
         <div className="lg:hidden">
           <SignInMessage />
           <TheHr />
@@ -77,6 +70,18 @@ const Homepage = () => {
           <TopPicks data={topPicksProductsInternationallyData} />
           <EndMessage />
           <FashionInTrends data={exploreDepartmentSectionData} />
+        </div>
+        <div className="hidden lg:block">
+          <BackgroundFilterBlack />
+          <TheCarousal1 />
+          {/* <HomePageCarouselForLargerScreens /> */}
+          <HomepageCarouselLargeScreen />
+          <LargerScreenSection1Type2 data={largerSectionData2} />
+          <ProductCarousel3ForLargerScreens data={productsData} />
+          <BooksSliderForLargeScreens />
+          <LargerScreenSection1Type2 data={largerSectionData3} />
+          <ProductCarousel3ForLargerScreens data={productsData} />
+          <SignInMessage />
         </div>
       </main>
       <footer>
