@@ -9,7 +9,7 @@ const ShopAccessories = (props: propsType) => {
   return (
     <div className=" grid grid-cols-2">
       <div className="flex items-center justify-center">
-        <div className=" max-w-[80%] font-medium">{title}</div>
+        <div className=" max-w-[80%] font-medium md:text-[2.5vw]">{title}</div>
       </div>
       <div>
         <img src={imageSrc} />

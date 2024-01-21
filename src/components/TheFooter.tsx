@@ -1,6 +1,6 @@
+import ar7id from "ar7id";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import TheHr from "./TheHr";
 
 const TheFooter = () => {
   let navbar: HTMLElement | undefined;
@@ -174,10 +174,10 @@ const TheFooter = () => {
       <div className="hidden lg:flex flex-col gap-[5vw] bg-[#131A22] text-white p-[3vw]">
         {Array.from({ length: 4 }).map(() => {
           return (
-            <div className="flex justify-around text-[0.8vw]">
+            <div className="flex justify-around text-[0.8vw]" key={ar7id()}>
               {Array.from({ length: 7 }).map(() => {
                 return (
-                  <div className="w-[10vw]">
+                  <div className="w-[10vw]" key={ar7id()}>
                     <div className="font-medium">Amazon Web Services</div>
                     <div className=" opacity-70">
                       Scalable Cloud Computing Services

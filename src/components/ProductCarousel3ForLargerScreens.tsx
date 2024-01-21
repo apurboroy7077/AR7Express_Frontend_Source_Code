@@ -8,11 +8,7 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import {
-  largerSectionData1,
-  largerSectionData2,
-} from "../models/LargerSectionData";
-import LargerScreenSection1Type2 from "./LargerScreenSection1Type2";
+
 import ar7id from "ar7id";
 type propsType = {
   data: {

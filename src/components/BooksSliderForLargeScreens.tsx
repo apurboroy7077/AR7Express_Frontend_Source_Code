@@ -1,4 +1,3 @@
-import { Component } from "react";
 import Slider from "react-slick";
 
 let BooksSliderForLargeScreens = () => {

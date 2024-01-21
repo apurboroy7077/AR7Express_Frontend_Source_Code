@@ -23,3 +23,4 @@
     3. Added Language Section in footer for Larger Screens.
 14. Date 21/1/2024, Sunday.
     1. Planned to Add Extra footer section for Larger Screens in Footer.
+    2. Added Some Setting to Toppicks.tsx and FashioninTrends.tsx for looking good in mobile devices.

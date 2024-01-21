@@ -14,24 +14,25 @@ const TopPicks = (props: propsType) => {
   return (
     <div className=" p-3 ">
       <div className=" font-bold">{title}</div>
-
-      {Array.from({ length: 3 }).map(() => {
-        return (
-          <div className="mt-3 ml-3" key={ar7id()}>
-            <div className="flex">
-              <div className="min-w-[25%]">
-                <img src={imageSrc} className="w-full" />
-              </div>
-              <div className="ml-3">
-                <div className="  text-xs font-medium">
-                  {productDescription}
+      <div className="md:grid md:grid-cols-2">
+        {Array.from({ length: 3 }).map(() => {
+          return (
+            <div className="mt-3 ml-3" key={ar7id()}>
+              <div className="flex">
+                <div className="min-w-[25%]">
+                  <img src={imageSrc} className="w-full" />
                 </div>
-                <div className="font-medium">{price}</div>
+                <div className="ml-3">
+                  <div className="  text-xs font-medium">
+                    {productDescription}
+                  </div>
+                  <div className="font-medium">{price}</div>
+                </div>
               </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 };
