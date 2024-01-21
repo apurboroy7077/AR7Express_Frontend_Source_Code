@@ -21,3 +21,5 @@
     1. Added another LargerScreenSection1Type2 in homepage. Added Some Padding to <main> in Homepage.tsx
     2. Modified Sign in Component Design for larger Screens and Added it to Homepage for Larger Screens.
     3. Added Language Section in footer for Larger Screens.
+14. Date 21/1/2024, Sunday.
+    1. Planned to Add Extra footer section for Larger Screens in Footer.

@@ -142,8 +142,10 @@ const TheFooter = () => {
           </div>
         </div>
       </div>
+      {/* FOR BIGGER SCREENS--------------------------------------------------------------------------------------------------------------------------- */}
       <div className="bg-[#3A4553] h-[2px]"></div>
-      <div className="bg-slate-800 p-[3vw] flex justify-center">
+      {/* FOR BIGGER SCREENS--------------------------------------------------------------------------------------------------------------------------- */}
+      <div className="hidden lg:flex bg-slate-800 p-[3vw]  justify-center ">
         <div className="flex items-center gap-[3vw]">
           <div className="text-white text-[2.3vw]">
             <i className="fa-brands fa-amazon " />
@@ -168,7 +170,43 @@ const TheFooter = () => {
           </div>
         </div>
       </div>
-      <div className=" bg-slate-950 text-white pt-5 pb-5">
+      {/* FOR BIGGER SCREENS--------------------------------------------------------------------------------------------------------------------------- */}
+      <div className="hidden lg:flex flex-col gap-[5vw] bg-[#131A22] text-white p-[3vw]">
+        {Array.from({ length: 4 }).map(() => {
+          return (
+            <div className="flex justify-around text-[0.8vw]">
+              {Array.from({ length: 7 }).map(() => {
+                return (
+                  <div className="w-[10vw]">
+                    <div className="font-medium">Amazon Web Services</div>
+                    <div className=" opacity-70">
+                      Scalable Cloud Computing Services
+                    </div>
+                    <div className=" opacity-70">Affordable Cost</div>
+                  </div>
+                );
+              })}
+            </div>
+          );
+        })}
+      </div>
+      {/* FOR BIGGER SCREENS----------------------------------------------------------------------------------------------------------------------------------------- */}
+      <div className="hidden lg:block bg-[#131A22] text-white pb-[2vw] text-[1vw] font-medium">
+        <div className="flex items-center justify-center gap-[1.5vw]">
+          <div>Conditions of Use</div>
+          <div>Privacy Notice</div>
+          <div>
+            Your Ads Privacy Choices{" "}
+            <i className="fa-regular fa-circle-check" />
+          </div>
+        </div>
+        <div className="flex items-center justify-center gap-[1.5vw]">
+          <div className="opacity-70">
+            © 1996-2024, AR7Express.com, Inc. or its affiliates
+          </div>
+        </div>
+      </div>
+      <div className=" bg-slate-950 text-white pt-5 pb-5 lg:hidden">
         <div className="flex justify-around text-sm pr-7 pl-7 ">
           <div>
             <i className="fa-solid fa-globe" /> English
