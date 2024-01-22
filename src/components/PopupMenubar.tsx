@@ -1,29 +1,18 @@
 import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
 import TheBoldHr from "./TheBoldHr";
-type propstype = {
-  data: {
-    isPopupMenuOpen: boolean;
-  };
-};
-const PopupMenubar = (props: propstype) => {
+import CloseMenubar from "./CloseMenubar";
+import ar7id from "ar7id";
+import React from "react";
+
+const PopupMenubar = () => {
   let portalContainer = document.getElementById("portal");
   // RETURN NULL IF PORTALCONTAINER IS NOT FOUND--------------------------------------------------------------------
   if (!portalContainer) {
     return null;
   }
   let handleClosePopupMenubar = () => {
-    let menubar = document.getElementsByClassName("menubar")[0] as HTMLElement;
-    // MOVING MENUBAR BACK TO LEFT--------------------------------------------------------------------------------------------------------------------
-    menubar.style.left = "-100%";
-    let backgroundDarkForMenubar = document.getElementsByClassName(
-      "backgroundDarkForMenubar"
-    )[0] as HTMLElement;
-    // REMOVING LOW BRIGTHNESS DIV------------------------------------------------------------------------------------------------------------------------
-    backgroundDarkForMenubar.style.opacity = "0";
-    let rootDiv = document.getElementById("root") as HTMLDivElement;
-    // Making Root Div Static Again so that people Can Scroll---------------------------------------------------------------------------------------------------------
-    rootDiv.style.position = "static";
+    CloseMenubar();
   };
   return ReactDOM.createPortal(
     <>
@@ -34,7 +23,7 @@ const PopupMenubar = (props: propstype) => {
       ></div>
       {/* THIS IS THE MAIN MENUBAR--------------------------------------------------------------------------------------------------------------- */}
       <div
-        className={`menubar absolute w-[80vw] h-fit  top-0 left-[-100%] ease-in-out duration-500 transition-all`}
+        className={`menubar absolute z-20 w-[80vw] lg:w-[30vw] h-fit  top-0 left-[-100%] ease-in-out duration-500 transition-all`}
         style={{ boxShadow: "3px 3px 10px black" }}
       >
         <div className=" bg-slate-600  flex justify-end p-1">
@@ -43,18 +32,19 @@ const PopupMenubar = (props: propstype) => {
             onClick={handleClosePopupMenubar}
           />
         </div>
-        <div className=" bg-slate-600  flex justify-end p-2 pr-3 text-[1.1rem] text-white">
+        <div className=" bg-slate-600  flex justify-end p-2 pr-3 text-[1.1rem] text-white  lg:justify-start lg:text-[1.5vw] lg:pl-[2vw]">
           <Link to="/">
-            Sign in <i className="fa-solid fa-user ml-1" />
+            <i className="fa-solid fa-user mr-[0.7vw] hidden lg:inline-block" />
+            Sign in <i className="fa-solid fa-user ml-1 lg:hidden" />
           </Link>
         </div>
-        <div className=" text-[1.5rem] text-white p-2 bg-slate-600 leading-3 font-bold">
+        <div className=" text-[1.5rem] text-white p-2 bg-slate-600 leading-3 font-bold lg:hidden">
           Browse
         </div>
-        <div className=" text-[1.7rem] text-white p-2 bg-slate-600 leading-3 font-medium pb-[2rem]">
+        <div className=" text-[1.7rem] text-white p-2 bg-slate-600 leading-3 font-medium pb-[2rem] lg:hidden">
           <span className="ml-1">Amazon</span>
         </div>
-        <div className="bg-white flex justify-between p-2 font-medium text-[1.1rem]">
+        <div className="bg-white flex justify-between p-2 font-medium text-[1.1rem] lg:hidden">
           <div>
             <Link to="/">Amazon Home</Link>
           </div>
@@ -64,57 +54,51 @@ const PopupMenubar = (props: propstype) => {
             </Link>
           </div>
         </div>
-        <TheBoldHr />
-        <div className="bg-white  p-2 text-[1.1rem]">
-          <div className="font-medium">
+        <div className="lg:hidden">
+          <TheBoldHr />
+        </div>
+        <div className="bg-white  p-2 text-[1.1rem] lg:text-[1.17vw] lg:pl-[2vw]">
+          <div className="font-medium lg:text-[1.15vw]">
             <Link to="/">Trending</Link>
           </div>
-          <div className="text-[0.9rem] font-medium opacity-90 mt-1 mb-1">
+          <div className="text-[0.9rem] font-medium opacity-90 mt-1 mb-1 lg:text-[0.95vw]">
             <Link to="/">Movers & Shakers</Link>
           </div>
         </div>
         <TheBoldHr />
-        <div className="bg-white  p-2 text-[1.1rem]">
-          <div className="font-medium">
-            <Link to="/">Top Departments</Link>
-          </div>
-          <div className="text-[0.9rem] font-medium opacity-90 mt-1 mb-1">
-            <Link to="/">Home</Link>
-          </div>
-          <div className="text-[0.9rem] font-medium opacity-90 mt-1 mb-1">
-            <Link to="/">Health & Household</Link>
-          </div>
-          <div className="text-[0.9rem] font-medium opacity-90 mt-1 mb-1">
-            <Link to="/">Books</Link>
-          </div>
-        </div>
-        <TheBoldHr />
-        <div className="bg-white  p-2 text-[1.1rem]">
-          <div className="font-medium">
-            <Link to="/">Top Departments</Link>
-          </div>
-          <div className="text-[0.9rem] font-medium opacity-90 mt-1 mb-1">
-            <Link to="/">Home</Link>
-          </div>
-          <div className="text-[0.9rem] font-medium opacity-90 mt-1 mb-1">
-            <Link to="/">Health & Household</Link>
-          </div>
-          <div className="text-[0.9rem] font-medium opacity-90 mt-1 mb-1">
-            <Link to="/">Books</Link>
-          </div>
-        </div>
-        <TheBoldHr />
-        <div className="bg-white  p-2 text-[1.1rem]">
-          <div className="font-medium">
+        {Array.from({ length: 6 }).map(() => {
+          return (
+            <React.Fragment key={ar7id()}>
+              <div className="bg-white  p-2 text-[1.1rem] lg:pl-[2vw]">
+                <div className="font-medium lg:text-[1.15vw]">
+                  <Link to="/">Top Departments</Link>
+                </div>
+                <div className="text-[0.9rem] font-medium opacity-90 mt-1 mb-1 lg:text-[0.95vw]">
+                  <Link to="/">Home</Link>
+                </div>
+                <div className="text-[0.9rem] font-medium opacity-90 mt-1 mb-1 lg:text-[0.95vw]">
+                  <Link to="/">Health & Household</Link>
+                </div>
+                <div className="text-[0.9rem] font-medium opacity-90 mt-1 mb-1 lg:text-[0.95vw]">
+                  <Link to="/">Books</Link>
+                </div>
+              </div>
+              <TheBoldHr />
+            </React.Fragment>
+          );
+        })}
+
+        <div className="bg-white  p-2 text-[1.1rem] lg:pl-[2vw]">
+          <div className="font-medium lg:text-[1.15vw]">
             <Link to="/">Settings</Link>
           </div>
-          <div className="text-[0.9rem] font-medium opacity-90 mt-1 mb-1">
+          <div className="text-[0.9rem] font-medium opacity-90 mt-1 mb-1 lg:text-[0.95vw]">
             <Link to="/">
               <i className="fa-solid fa-earth-asia mr-1" />
               Asia
             </Link>
           </div>
-          <div className="text-[0.9rem] font-medium opacity-90 mt-1 mb-1 ">
+          <div className="text-[0.9rem] font-medium opacity-90 mt-1 mb-1 lg:text-[0.95vw]">
             <Link to="/" className="flex items-center">
               <img
                 src="/images/logo/bangladesh.png"

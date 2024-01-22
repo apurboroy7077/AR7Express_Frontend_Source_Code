@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PopupMenubar from "./PopupMenubar";
+import OpenMenubar from "./OpenMenubar";
 
 const TheNavbar = () => {
   let [isPopupMenuOpen, setIsPopupMenuOpen] = useState(false);
@@ -16,17 +17,10 @@ const TheNavbar = () => {
     theBlackDiv.classList.add("hidden");
   };
   let handleClickOnMenuIcon = () => {
-    let menubar = document.getElementsByClassName("menubar")[0] as HTMLElement;
-    // APPLYING LEFT-0 TO BRING IT IN FRONT OF THE USER------------------------------------------------------------------------------------------------------
-    menubar.style.left = "0";
-    let backgroundDarkForMenubar = document.getElementsByClassName(
-      "backgroundDarkForMenubar"
-    )[0] as HTMLElement;
-    // APPLYING OPACITY 1 TO LOW LEVEL BRIGTHNESS BLACK DIV SO THAT THE BACKGROUND BECOMES DARK-----------------------------------------------------------------------
-    backgroundDarkForMenubar.style.opacity = "1";
-    let rootDiv = document.getElementById("root") as HTMLDivElement;
-    // MAKING THE POSITION OF ROOT DIV FIXED SO THAT IT CAN NOT BE SCROLLED WHEN MENUBAR IS OPEN.-----------------------------------------------------------------------------
-    rootDiv.style.position = "fixed";
+    OpenMenubar();
+  };
+  let handleClickOnLargeScreenMenuIcon = () => {
+    OpenMenubar();
   };
   return (
     <>
@@ -145,7 +139,10 @@ const TheNavbar = () => {
       <div>
         <div className="hidden text-nowrap gap-5 text-white p-2 pl-6 lg:flex bg-slate-800 text-lg font-medium items-center">
           <div>
-            <i className="fa-solid fa-bars text-3xl" />
+            <i
+              className="fa-solid fa-bars text-3xl"
+              onClick={handleClickOnLargeScreenMenuIcon}
+            />
           </div>
           <div>Deals</div>
           <div>Amazon Basics</div>
@@ -157,7 +154,7 @@ const TheNavbar = () => {
           <div>Amazon Basics</div>
         </div>
       </div>
-      <PopupMenubar data={{ isPopupMenuOpen }} />
+      <PopupMenubar />
     </>
   );
 };
