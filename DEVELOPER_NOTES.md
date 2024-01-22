@@ -24,3 +24,14 @@
 14. Date 21/1/2024, Sunday.
     1. Planned to Add Extra footer section for Larger Screens in Footer.
     2. Added Some Setting to Toppicks.tsx and FashioninTrends.tsx for looking good in mobile devices.
+    3. Planned to add Modal for PopupMenubar
+    4. Using React Modal portal to Create Popup
+15. Date 22/1/2024, Monday.
+    1. Created Popup menubar for small Screens. Popup Menubar Strategies-
+       1. First Created a Portal Using React Portal.
+       2. Created a low level brigtness div inside React Portal to cover all the other stuffs when the Menubar is Open.
+       3. Created a Menubar positioned Absolute. It will stay outside the screen all the time. It will only appear when someone clicks on the menubar.
+       4. Made background low level brightness div's opacity to 1 when someone clicks on the Menubar.
+       5. Made menubar style "left-0" when someone Clicks on it. So it comes in front of everyone.
+       6. Made the position of Root div to Fixed so that it does scrolls when the menubar is open.
+       7. Undoing the above things if someone closes the menubar by clicking on the cross button of the menubar.

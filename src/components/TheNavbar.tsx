@@ -1,4 +1,8 @@
+import { useState } from "react";
+import PopupMenubar from "./PopupMenubar";
+
 const TheNavbar = () => {
+  let [isPopupMenuOpen, setIsPopupMenuOpen] = useState(false);
   let handleSearchBarFocus = () => {
     let theBlackDiv = document.getElementsByClassName(
       "background_filter_black_div"
@@ -11,13 +15,29 @@ const TheNavbar = () => {
     )[0];
     theBlackDiv.classList.add("hidden");
   };
+  let handleClickOnMenuIcon = () => {
+    let menubar = document.getElementsByClassName("menubar")[0] as HTMLElement;
+    // APPLYING LEFT-0 TO BRING IT IN FRONT OF THE USER------------------------------------------------------------------------------------------------------
+    menubar.style.left = "0";
+    let backgroundDarkForMenubar = document.getElementsByClassName(
+      "backgroundDarkForMenubar"
+    )[0] as HTMLElement;
+    // APPLYING OPACITY 1 TO LOW LEVEL BRIGTHNESS BLACK DIV SO THAT THE BACKGROUND BECOMES DARK-----------------------------------------------------------------------
+    backgroundDarkForMenubar.style.opacity = "1";
+    let rootDiv = document.getElementById("root") as HTMLDivElement;
+    // MAKING THE POSITION OF ROOT DIV FIXED SO THAT IT CAN NOT BE SCROLLED WHEN MENUBAR IS OPEN.-----------------------------------------------------------------------------
+    rootDiv.style.position = "fixed";
+  };
   return (
     <>
       <div className="the_navbar bg-slate-900 p-2 max-w-full overflow-hidden lg:p-3">
         <div className="flex items-center justify-between   text-white">
           <div className="flex items-center">
             <div className="lg:hidden">
-              <i className="fa-solid fa-bars text-3xl" />
+              <i
+                className="fa-solid fa-bars text-3xl"
+                onClick={handleClickOnMenuIcon}
+              />
             </div>
             <div className="ml-2">
               <i className="fa-brands fa-amazon text-3xl lg:text-4xl" />
@@ -137,6 +157,7 @@ const TheNavbar = () => {
           <div>Amazon Basics</div>
         </div>
       </div>
+      <PopupMenubar data={{ isPopupMenuOpen }} />
     </>
   );
 };

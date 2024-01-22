@@ -1,4 +1,3 @@
-
 import BackgroundFilterBlack from "../components/BackgroundFilterBlack";
 import BooksSliderForLargeScreens from "../components/BooksSliderForLargeScreens";
 import EndMessage from "../components/EndMessage";
@@ -46,6 +45,7 @@ const Homepage = () => {
       </header>
       <main className="relative lg:bg-zinc-200 pb-5">
         <div className="lg:hidden">
+          <TheCarousal1 />
           <SignInMessage />
           <TheHr />
           <FashionInTrends data={shoesTrendsSectionData} />
