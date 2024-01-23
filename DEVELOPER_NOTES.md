@@ -35,3 +35,9 @@
        5. Made menubar style "left-0" when someone Clicks on it. So it comes in front of everyone.
        6. Made the position of Root div to Fixed so that it does scrolls when the menubar is open.
        7. Undoing the above things if someone closes the menubar by clicking on the cross button of the menubar.
+    2. Started to Create Cart Page.
+       1. Planned to Do Mobile First Approach in Designing.
+       2. Found Out that line height does not works on span by Default. But it works on div.
+16. Date 23/1/2024, Tuesday.
+    1. Moved Cart Buttons to Extra Component for Better Maintanibility.
+    2. Added function of increasing or decreasing total characters of description of cart product according to screen size.

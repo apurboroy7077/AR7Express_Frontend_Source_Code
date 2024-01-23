@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PopupMenubar from "./PopupMenubar";
 import OpenMenubar from "./OpenMenubar";
+import { Link } from "react-router-dom";
 
 const TheNavbar = () => {
   let [isPopupMenuOpen, setIsPopupMenuOpen] = useState(false);
@@ -34,7 +35,9 @@ const TheNavbar = () => {
               />
             </div>
             <div className="ml-2">
-              <i className="fa-brands fa-amazon text-3xl lg:text-4xl" />
+              <Link to="/">
+                <i className="fa-brands fa-amazon text-3xl lg:text-4xl" />
+              </Link>
             </div>
             <div className="text-white items-center hidden lg:flex ml-4">
               <i className="fa-solid fa-location-dot mr-1 " />
@@ -94,7 +97,9 @@ const TheNavbar = () => {
             </div>
             {/* CART ICON FOR ALL DEVICES------------------------------------------------------------------------------------------------------------------------------------------ */}
             <div className="lg:mr-10 ">
-              <i className="fa-solid fa-cart-shopping text-2xl lg:text-4xl" />
+              <Link to="/cart">
+                <i className="fa-solid fa-cart-shopping text-2xl lg:text-4xl" />
+              </Link>
             </div>
           </div>
         </div>

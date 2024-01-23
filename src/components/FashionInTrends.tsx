@@ -10,6 +10,7 @@ const FashionInTrends = (props: propsType) => {
   // SETTING THE NUMBER OF PRODUCTS ACCORDING TO SCREEN SIZE--------------------------------------------------------------------------------------------------
   let handleResize = () => {
     if (window.innerWidth > 767) {
+      console.log(window.innerWidth);
       setArrowLength(6);
     } else {
       setArrowLength(4);
