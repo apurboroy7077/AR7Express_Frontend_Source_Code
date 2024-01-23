@@ -43,3 +43,5 @@
     2. Added function of increasing or decreasing total characters of description of cart product according to screen size.
     3. You need to add top-0 or something like this in order to make "position:sticky" work.
     4. Devided Cart Section to Other Little Components.
+    5. Building Cart Section for Larger Screens.
+    6. For transforming Scale in tailwind css when the Button is active, use class name "active:scale-[0.95]"
