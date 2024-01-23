@@ -41,3 +41,5 @@
 16. Date 23/1/2024, Tuesday.
     1. Moved Cart Buttons to Extra Component for Better Maintanibility.
     2. Added function of increasing or decreasing total characters of description of cart product according to screen size.
+    3. You need to add top-0 or something like this in order to make "position:sticky" work.
+    4. Devided Cart Section to Other Little Components.
