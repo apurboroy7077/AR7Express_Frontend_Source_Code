@@ -6,12 +6,14 @@ import CartProductLargeScreen from "./CartProductLargeScreen";
 import CartInternationalCustomerPurchased from "./CartInternationalCustomerPurchased";
 import productsData from "./../../models/ProductsData.json";
 import CartCheckoutSectionLargeScreen from "./CartCheckoutSectionLargeScreen";
+import { Link } from "react-router-dom";
+import EmptyCartMessage from "./EmptyCartMessage";
 
 const CartSection = () => {
   return (
     <>
       <div className="pl-2 pt-3 pb-3 pr-2 lg:hidden">
-        <div></div>
+        <EmptyCartMessage />
         <TotalBills />
         <Checkout />
         <div className="flex items-center mb-[0.7rem]">
@@ -27,8 +29,8 @@ const CartSection = () => {
         <CartProduct />
         <CartProduct />
         <div className="mt-5 ">
-          <div className="mb-3 lg:mb-5">
-            <span className="text-[1.1rem] font-medium">
+          <div className="mb-4 lg:mb-5">
+            <span className="text-[1.1rem] font-semibold">
               New international customers purchased
             </span>
           </div>
