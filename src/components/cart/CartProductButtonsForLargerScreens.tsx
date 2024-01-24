@@ -1,3 +1,5 @@
+import ar7id from "ar7id";
+
 const CartProductButtonsForLargerScreens = () => {
   return (
     <div className="flex flex-wrap gap-3 mt-2">
@@ -11,7 +13,7 @@ const CartProductButtonsForLargerScreens = () => {
         >
           <option>Qty</option>
           {Array.from({ length: 10 }).map((_, index) => {
-            return <option>{index}</option>;
+            return <option key={ar7id()}>{index}</option>;
           })}
         </select>
       </div>

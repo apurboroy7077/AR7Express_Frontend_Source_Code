@@ -45,3 +45,8 @@
     4. Devided Cart Section to Other Little Components.
     5. Building Cart Section for Larger Screens.
     6. For transforming Scale in tailwind css when the Button is active, use class name "active:scale-[0.95]"
+    7. w-[10rem] was not working properly so used both min-w-[10rem] max-w-[10rem] together and now its working.
+17. Date 24/1/2024, Wednesday
+    1. Adding new International Customers Purchased Section in Cart Page.
+    2. You add active:border-[1px] active:border-[black] to add border when element is active in tailwind.
+    3. Adding Empty Message for cart.

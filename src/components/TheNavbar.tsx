@@ -30,7 +30,7 @@ const TheNavbar = () => {
           <div className="flex items-center">
             <div className="lg:hidden">
               <i
-                className="fa-solid fa-bars text-3xl"
+                className="fa-solid fa-bars text-3xl cursor-pointer"
                 onClick={handleClickOnMenuIcon}
               />
             </div>
@@ -145,7 +145,7 @@ const TheNavbar = () => {
         <div className="hidden text-nowrap gap-5 text-white p-2 pl-6 lg:flex bg-slate-800 text-lg font-medium items-center">
           <div>
             <i
-              className="fa-solid fa-bars text-3xl"
+              className="fa-solid fa-bars text-3xl cursor-pointer"
               onClick={handleClickOnLargeScreenMenuIcon}
             />
           </div>
