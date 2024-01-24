@@ -8,6 +8,7 @@ import productsData from "./../../models/ProductsData.json";
 import CartCheckoutSectionLargeScreen from "./CartCheckoutSectionLargeScreen";
 import { Link } from "react-router-dom";
 import EmptyCartMessage from "./EmptyCartMessage";
+import EmptyCartMessageLargeScreen from "./EmptyCartMessageLargeScreen";
 
 const CartSection = () => {
   return (
@@ -40,6 +41,7 @@ const CartSection = () => {
       <div className="hidden lg:flex justify-between bg-slate-200 p-[1vw] ">
         <div className=" w-[75%] h-fit">
           <div className="p-[1vw] bg-white">
+            <EmptyCartMessageLargeScreen />
             <div className="">
               <span className="text-[1.7vw] font-medium">Shopping Cart</span>
             </div>

@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
 const EmptyCartMessage = () => {
-  let test = 0;
-  if (test == 0) {
-    return null;
-  }
+  //   let test = 0;
+  //   if (test == 0) {
+  //     return null;
+  //   }
   return (
     <div className="mb-3">
       <div className=" flex justify-center">
