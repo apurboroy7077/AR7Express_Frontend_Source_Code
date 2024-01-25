@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
 const EmptyCartMessageLargeScreen = () => {
-  //   let test = 0;
-  //   if (test == 0) {
-  //     return null;
-  //   }
+  let test = 0;
+  if (test == 0) {
+    return null;
+  }
   return (
     <div className="mb-3 flex">
       <div className="w-[50%]">

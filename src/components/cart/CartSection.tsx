@@ -9,6 +9,8 @@ import CartCheckoutSectionLargeScreen from "./CartCheckoutSectionLargeScreen";
 import { Link } from "react-router-dom";
 import EmptyCartMessage from "./EmptyCartMessage";
 import EmptyCartMessageLargeScreen from "./EmptyCartMessageLargeScreen";
+import CartSubtotalForLargeScreen from "./CartSubtotalForLargeScreen";
+import SendAsAGiftSectionForSmallerScreens from "./SendAsAGiftSectionForSmallerScreens";
 
 const CartSection = () => {
   return (
@@ -17,14 +19,7 @@ const CartSection = () => {
         <EmptyCartMessage />
         <TotalBills />
         <Checkout />
-        <div className="flex items-center mb-[0.7rem]">
-          <span>
-            <input type="checkbox" />
-          </span>
-          <span className="ml-1 text-sm font-medium">
-            Send as a Gift. Add Custom Message.
-          </span>
-        </div>
+        <SendAsAGiftSectionForSmallerScreens />
         <TheHr />
         <CartProduct />
         <CartProduct />
@@ -53,10 +48,7 @@ const CartSection = () => {
               <CartProductLargeScreen />
               <CartProductLargeScreen />
             </div>
-            <div className="mt-2 mb-5 text-end">
-              <span className="text-[1.2rem]">Subtotal (6 items): </span>
-              <span className="text-[1.2rem] font-medium">$2,030.94</span>
-            </div>
+            <CartSubtotalForLargeScreen />
           </div>
           <div className="mt-5 pr-[10rem]">
             <span className="text-xs font-medium ">

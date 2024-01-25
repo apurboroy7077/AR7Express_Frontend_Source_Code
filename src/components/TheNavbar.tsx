@@ -64,7 +64,11 @@ const TheNavbar = () => {
           </div>
           <div className="flex gap-3 items-center">
             {/* SMALL DEVICES SIGN IN-------------------------------------------------------------------------------------------------------------------- */}
-            <div className="text-1xl text-nowrap lg:hidden">Sign in</div>
+            <div className="text-1xl text-nowrap lg:hidden active:scale-[0.9]">
+              <Link to="/signin" className="active:scale-[0.9]">
+                Sign in
+              </Link>
+            </div>
             {/* SMALL DEVICES USER ICON------------------------------------------------------------------------------------------------------------------------------------- */}
             <div className="lg:hidden">
               <i className="fa-regular fa-user text-2xl" />

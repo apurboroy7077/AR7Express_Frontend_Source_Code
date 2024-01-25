@@ -50,3 +50,6 @@
     1. Adding new International Customers Purchased Section in Cart Page.
     2. You add active:border-[1px] active:border-[black] to add border when element is active in tailwind.
     3. Adding Empty Message for cart.
+    4. Updated Empty Cart Message for both Small Screens and Large Screens.
+    5. Adding Sign in and Signup for Smaller Devices
+    6. Made radio type input block to make it work with flex items-center correctly.
