@@ -16,48 +16,46 @@ const SigninSection = () => {
   };
 
   return (
-    <div className=" bg-[#d6bfbf]">
+    <div className=" bg-[#F6F6F6]">
       <div className=" max-w-[27rem] p-3 m-auto ">
         <div>
           <span className=" text-[1.3rem] font-medium">Welcome</span>
         </div>
         <div className="bg-white p-5 mt-2 rounded border-[1px] border-[black] ">
-          <form>
-            <div className="flex items-start ">
-              <span>
-                <input
-                  type="radio"
-                  className=" block h-[1.3rem] w-[1.3rem]"
-                  checked={isSignUpComponents}
-                  onClick={handleIsCreateAccountInputChange}
-                />
+          <div className="flex items-start ">
+            <span>
+              <input
+                type="radio"
+                className=" block h-[1.3rem] w-[1.3rem]"
+                checked={isSignUpComponents}
+                onClick={handleIsCreateAccountInputChange}
+              />
+            </span>
+            <span>
+              <span className="ml-3 font-medium ">Create Account.</span>
+              <span className="ml-1 font-medium text-[0.9rem] ">
+                New to Amazon?
               </span>
-              <span>
-                <span className="ml-3 font-medium ">Create Account.</span>
-                <span className="ml-1 font-medium text-[0.9rem] ">
-                  New to Amazon?
-                </span>
+            </span>
+          </div>
+          <SignupComponents data={isSignUpComponents} />
+          <div className="flex items-start mt-3">
+            <span>
+              <input
+                type="radio"
+                className=" block h-[1.3rem] w-[1.3rem]"
+                checked={isSignInComponents}
+                onClick={handleIsCreateAccountInputChange}
+              />
+            </span>
+            <span>
+              <span className="ml-3 font-medium ">Sign in.</span>
+              <span className="ml-1 font-medium text-[0.9rem] ">
+                Already a customer?
               </span>
-            </div>
-            <SignupComponents data={isSignUpComponents} />
-            <div className="flex items-start ">
-              <span>
-                <input
-                  type="radio"
-                  className=" block h-[1.3rem] w-[1.3rem]"
-                  checked={isSignInComponents}
-                  onClick={handleIsCreateAccountInputChange}
-                />
-              </span>
-              <span>
-                <span className="ml-3 font-medium ">Sign in.</span>
-                <span className="ml-1 font-medium text-[0.9rem] ">
-                  Already a customer?
-                </span>
-              </span>
-            </div>
-            <SigninComponents data={isSignInComponents} />
-          </form>
+            </span>
+          </div>
+          <SigninComponents data={isSignInComponents} />
         </div>
       </div>
     </div>

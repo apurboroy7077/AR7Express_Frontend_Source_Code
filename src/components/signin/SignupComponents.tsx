@@ -1,10 +1,10 @@
 const SignupComponents = (props) => {
-  let test = props.data;
-  if (!test) {
+  let shouldProceed = props.data;
+  if (!shouldProceed) {
     return null;
   }
   return (
-    <>
+    <form>
       <div className="mt-3">
         <div>
           <label className="font-medium">First and Last Name</label>
@@ -13,6 +13,7 @@ const SignupComponents = (props) => {
           <input
             type="text"
             className="border-[1px] border-[grey] w-full h-[3rem] pl-2 pr-2 rounded "
+            required
           />
         </div>
       </div>
@@ -21,7 +22,10 @@ const SignupComponents = (props) => {
           <label className="font-medium">Mobile number or Email</label>
         </div>
         <div className="mt-1">
-          <input className="border-[1px] border-[grey] w-full h-[3rem] pl-2 pr-2 rounded " />
+          <input
+            className="border-[1px] border-[grey] w-full h-[3rem] pl-2 pr-2 rounded "
+            required
+          />
         </div>
       </div>
       <div className="mt-3">
@@ -32,6 +36,7 @@ const SignupComponents = (props) => {
           <input
             type="password"
             className="border-[1px] border-[grey] w-full h-[3rem] pl-2 pr-2 rounded "
+            required
           />
         </div>
       </div>
@@ -58,7 +63,7 @@ const SignupComponents = (props) => {
           and <span className=" text-green-700">Privacy Notice</span>.
         </span>
       </div>
-    </>
+    </form>
   );
 };
 

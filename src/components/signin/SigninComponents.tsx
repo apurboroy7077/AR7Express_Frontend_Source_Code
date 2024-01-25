@@ -1,16 +1,19 @@
 const SigninComponents = (props) => {
-  let proceed = props.data;
-  if (!proceed) {
+  let shouldProceed = props.data;
+  if (!shouldProceed) {
     return null;
   }
   return (
-    <>
+    <form>
       <div className="mt-3">
         <div>
           <label className="font-medium">Email or Phone Number</label>
         </div>
         <div className="mt-1">
-          <input className="border-[1px] border-[grey] w-full h-[3rem] pl-2 pr-2 rounded " />
+          <input
+            className="border-[1px] border-[grey] w-full h-[3rem] pl-2 pr-2 rounded "
+            required
+          />
         </div>
       </div>
       <div className="mt-3">
@@ -21,6 +24,7 @@ const SigninComponents = (props) => {
           <input
             type="password"
             className="border-[1px] border-[grey] w-full h-[3rem] pl-2 pr-2 rounded "
+            required
           />
         </div>
       </div>
@@ -42,12 +46,12 @@ const SigninComponents = (props) => {
       </div>
       <div className="pt-3 ">
         <span className="font-medium">
-          By creating an account, you agree to Amazon's{" "}
+          By continuing, you agree to Amazon's{" "}
           <span className=" text-green-700">Conditions of Use </span>
           and <span className=" text-green-700">Privacy Notice</span>.
         </span>
       </div>
-    </>
+    </form>
   );
 };
 
