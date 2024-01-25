@@ -33,7 +33,7 @@ const PopupMenubar = () => {
           />
         </div>
         <div className=" bg-slate-600  flex justify-end p-2 pr-3 text-[1.1rem] text-white  lg:justify-start lg:text-[1.5vw] lg:pl-[2vw]">
-          <Link to="/signin">
+          <Link to="/signin" onClick={handleClosePopupMenubar}>
             <i className="fa-solid fa-user mr-[0.7vw] hidden lg:inline-block" />
             Sign in <i className="fa-solid fa-user ml-1 lg:hidden" />
           </Link>
@@ -46,10 +46,12 @@ const PopupMenubar = () => {
         </div>
         <div className="bg-white flex justify-between p-2 font-medium text-[1.1rem] lg:hidden">
           <div>
-            <Link to="/">Amazon Home</Link>
+            <Link to="/" onClick={handleClosePopupMenubar}>
+              Amazon Home
+            </Link>
           </div>
           <div>
-            <Link to="/">
+            <Link to="/" onClick={handleClosePopupMenubar}>
               <i className="fa-solid fa-house-chimney" />
             </Link>
           </div>
@@ -62,7 +64,9 @@ const PopupMenubar = () => {
             <Link to="/">Trending</Link>
           </div>
           <div className="text-[0.9rem] font-medium opacity-90 mt-1 mb-1 lg:text-[0.95vw]">
-            <Link to="/">Movers & Shakers</Link>
+            <Link to="/" onClick={handleClosePopupMenubar}>
+              Movers & Shakers
+            </Link>
           </div>
         </div>
         <TheBoldHr />
@@ -71,16 +75,24 @@ const PopupMenubar = () => {
             <React.Fragment key={ar7id()}>
               <div className="bg-white  p-2 text-[1.1rem] lg:pl-[2vw]">
                 <div className="font-medium lg:text-[1.15vw]">
-                  <Link to="/">Top Departments</Link>
+                  <Link to="/" onClick={handleClosePopupMenubar}>
+                    Top Departments
+                  </Link>
                 </div>
                 <div className="text-[0.9rem] font-medium opacity-90 mt-1 mb-1 lg:text-[0.95vw]">
-                  <Link to="/">Home</Link>
+                  <Link to="/" onClick={handleClosePopupMenubar}>
+                    Home
+                  </Link>
                 </div>
                 <div className="text-[0.9rem] font-medium opacity-90 mt-1 mb-1 lg:text-[0.95vw]">
-                  <Link to="/">Health & Household</Link>
+                  <Link to="/" onClick={handleClosePopupMenubar}>
+                    Health & Household
+                  </Link>
                 </div>
                 <div className="text-[0.9rem] font-medium opacity-90 mt-1 mb-1 lg:text-[0.95vw]">
-                  <Link to="/">Books</Link>
+                  <Link to="/" onClick={handleClosePopupMenubar}>
+                    Books
+                  </Link>
                 </div>
               </div>
               <TheBoldHr />
@@ -90,16 +102,22 @@ const PopupMenubar = () => {
 
         <div className="bg-white  p-2 text-[1.1rem] lg:pl-[2vw]">
           <div className="font-medium lg:text-[1.15vw]">
-            <Link to="/">Settings</Link>
+            <Link to="/" onClick={handleClosePopupMenubar}>
+              Settings
+            </Link>
           </div>
           <div className="text-[0.9rem] font-medium opacity-90 mt-1 mb-1 lg:text-[0.95vw]">
-            <Link to="/">
+            <Link to="/" onClick={handleClosePopupMenubar}>
               <i className="fa-solid fa-earth-asia mr-1" />
               Asia
             </Link>
           </div>
           <div className="text-[0.9rem] font-medium opacity-90 mt-1 mb-1 lg:text-[0.95vw]">
-            <Link to="/" className="flex items-center">
+            <Link
+              to="/"
+              onClick={handleClosePopupMenubar}
+              className="flex items-center"
+            >
               <img
                 src="/images/logo/bangladesh.png"
                 className=" inline w-5 mr-1"
