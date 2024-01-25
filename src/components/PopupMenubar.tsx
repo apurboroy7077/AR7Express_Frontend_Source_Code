@@ -33,7 +33,7 @@ const PopupMenubar = () => {
           />
         </div>
         <div className=" bg-slate-600  flex justify-end p-2 pr-3 text-[1.1rem] text-white  lg:justify-start lg:text-[1.5vw] lg:pl-[2vw]">
-          <Link to="/">
+          <Link to="/signin">
             <i className="fa-solid fa-user mr-[0.7vw] hidden lg:inline-block" />
             Sign in <i className="fa-solid fa-user ml-1 lg:hidden" />
           </Link>

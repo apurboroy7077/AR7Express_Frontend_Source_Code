@@ -1,8 +1,14 @@
+import { useState } from "react";
+
 const SigninComponents = (props) => {
   let shouldProceed = props.data;
   if (!shouldProceed) {
     return null;
   }
+  let [showPassword, setShowPassword] = useState(false);
+  let handleClickOnCheckboxToShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
   return (
     <form>
       <div className="mt-3">
@@ -22,7 +28,7 @@ const SigninComponents = (props) => {
         </div>
         <div className="mt-1">
           <input
-            type="password"
+            type={showPassword ? "text" : "password"}
             className="border-[1px] border-[grey] w-full h-[3rem] pl-2 pr-2 rounded "
             required
           />
@@ -30,7 +36,11 @@ const SigninComponents = (props) => {
       </div>
       <div className="mt-3 flex items-center">
         <span>
-          <input type="checkbox" className="block w-[1.2rem] h-[1.2rem]" />
+          <input
+            type="checkbox"
+            className="block w-[1.2rem] h-[1.2rem]"
+            onClick={handleClickOnCheckboxToShowPassword}
+          />
         </span>
         <span className="ml-2 text-sm font-medium opacity-90">
           Show Password

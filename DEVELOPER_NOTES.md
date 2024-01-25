@@ -53,3 +53,7 @@
     4. Updated Empty Cart Message for both Small Screens and Large Screens.
     5. Adding Sign in and Signup for Smaller Devices
     6. Made radio type input block to make it work with flex items-center correctly.
+18. Date 25/1/2024, Thursday.
+    1. Updated Sign in Page for Smaller section.
+    2. Updated Responsiveness for sign in/up page and also added show password facility for both of them.
+    3. Had Some trouble opening menubar. When I open menubar , signin page gets smaller. Solved this problem by applying w-[100%] to root div in index.html

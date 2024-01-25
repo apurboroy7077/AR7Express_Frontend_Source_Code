@@ -16,12 +16,20 @@ const SigninSection = () => {
   };
 
   return (
-    <div className=" bg-[#F6F6F6]">
+    <div className=" bg-[#F6F6F6] mb-5 min-w-full ">
+      <div className=" text-center hidden lg:block mb-[-1.2rem]">
+        <span className="text-[3.5rem] ">
+          <i className="fa-brands fa-amazon" />
+        </span>
+      </div>
       <div className=" max-w-[27rem] p-3 m-auto ">
-        <div>
+        <div className="lg:hidden">
           <span className=" text-[1.3rem] font-medium">Welcome</span>
         </div>
         <div className="bg-white p-5 mt-2 rounded border-[1px] border-[black] ">
+          <div className="hidden lg:block mb-2">
+            <span className=" text-[1.3rem] font-medium">Welcome</span>
+          </div>
           <div className="flex items-start ">
             <span>
               <input
