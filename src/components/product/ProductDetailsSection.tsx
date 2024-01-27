@@ -1,3 +1,11 @@
+import ar7id from "ar7id";
+import { Link } from "react-router-dom";
+import RatingOfProductDetails from "./RatingOfProductDetails";
+import AmazonsChoiceLogo from "./AmazonsChoiceLogo";
+import DeliveryDateInfo from "./DeliveryDateInfo";
+import QuantityOfProductInProductDetails from "./QuantityOfProductInProductDetails";
+import AddToCartInProductDetails from "./AddToCartInProductDetails";
+
 const ProductDetailsSection = () => {
   return (
     <>
@@ -5,17 +13,7 @@ const ProductDetailsSection = () => {
         <div>
           <span className="font-medium text-green-700">Griddle Mini Maker</span>
         </div>
-        <div className="text-xs">
-          <span className="mr-1 font-medium">5.0</span>
-          <span className="mr-1 font-medium text-orange-500">
-            <i className="fa-solid fa-star" />
-            <i className="fa-solid fa-star" />
-            <i className="fa-solid fa-star" />
-            <i className="fa-solid fa-star" />
-            <i className="fa-regular fa-star-half-stroke" />
-          </span>
-          <span className="font-medium text-green-700">5541</span>
-        </div>
+        <RatingOfProductDetails />
       </div>
       <div className="p-2">
         <span className="text-sm font-medium opacity-80">
@@ -25,10 +23,7 @@ const ProductDetailsSection = () => {
         </span>
       </div>
       <div className="p-2 flex items-center">
-        <span className="bg-[#232F3E] pr-2 pl-2 pt-1 pb-1 text-sm font-medium">
-          <span className="text-[white]">Amazon's </span>
-          <span className="text-[#F69931]">Choice</span>
-        </span>
+        <AmazonsChoiceLogo />
         <span className="text-xs font-medium ml-2">
           in Electric Kitchenwere
         </span>
@@ -56,13 +51,31 @@ const ProductDetailsSection = () => {
             <span className=" line-through cursor-pointer">${99}</span>
           </span>
         </div>
-        <div className="font-medium ">
-          <span className="font-medium text-sm opacity-90">
-            {
-              "Ipsum voluptua sed ipsum lorem aliquyam dolor, amet sed sed magna sed ipsum justo dolore, accusam dolor sed elitr consetetur sadipscing. Duo diam eirmod et stet sed ea magna sadipscing."
-            }
+        <div className="font-medium mt-2">
+          <span className="font-medium text-sm opacity-80">
+            {"$135.55 Shipping and Import fees in Bangladesh."}
+          </span>
+          <span className="ml-1 text-green-700 ">
+            <Link to="/">Details</Link>
           </span>
         </div>
+        <DeliveryDateInfo />
+        <div className="mt-2">
+          <span>
+            <span>
+              <i className="fa-solid fa-location-dot " />
+            </span>
+            <span className="text-green-700 font-medium">
+              {" "}
+              Deliver to Bangladesh
+            </span>
+          </span>
+        </div>
+        <div className="mt-2">
+          <span className="text-green-700 font-medium">In Stock</span>
+        </div>
+        <QuantityOfProductInProductDetails />
+        <AddToCartInProductDetails />
       </div>
     </>
   );
