@@ -13,11 +13,11 @@ import TheFooter from "../components/TheFooter";
 import TheHr from "../components/TheHr";
 import TheNavbar from "../components/TheNavbar";
 import TopPicks from "../components/TopPicks";
-import productsData from "./../models/ProductsData.json";
 import {
   largerSectionData2,
   largerSectionData3,
 } from "../models/LargerSectionData";
+import { productsData } from "../models/ProductsData";
 import {
   shopComputersAccessoriesData,
   shopCycleAccessoriesData,

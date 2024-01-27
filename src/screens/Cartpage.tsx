@@ -2,7 +2,7 @@ import ProductCarousel3ForLargerScreens from "../components/ProductCarousel3ForL
 import TheFooter from "../components/TheFooter";
 import TheNavbar from "../components/TheNavbar";
 import CartSection from "../components/cart/CartSection";
-import productsData from "./../models/ProductsData.json";
+import { productsData } from "../models/ProductsData";
 
 const Cartpage = () => {
   return (

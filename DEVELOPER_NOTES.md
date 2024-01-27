@@ -62,3 +62,4 @@
     6. Deviding ProductCarousel3ForLargerScreens to Smaller Components.
     7. Adding Product Details page for smaller screens.
 19. Date 27/1/2024, Saturday
+    1.

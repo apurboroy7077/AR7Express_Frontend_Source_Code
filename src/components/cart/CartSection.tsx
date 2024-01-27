@@ -6,7 +6,7 @@ import CartProductLargeScreen from "./CartProductLargeScreen";
 import CartInternationalCustomerPurchased from "./CartInternationalCustomerPurchased";
 import productsData from "./../../models/ProductsData.json";
 import CartCheckoutSectionLargeScreen from "./CartCheckoutSectionLargeScreen";
-import { Link } from "react-router-dom";
+
 import EmptyCartMessage from "./EmptyCartMessage";
 import EmptyCartMessageLargeScreen from "./EmptyCartMessageLargeScreen";
 import CartSubtotalForLargeScreen from "./CartSubtotalForLargeScreen";

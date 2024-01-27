@@ -10,8 +10,9 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import ar7id from "ar7id";
 import ProductsForProductCarousel3 from "./product/ProductsForProductCarousel3";
+import { productsDataType } from "../models/ProductsData";
 
-let ProductCarousel3ForLargerScreens = (props: { data: [] }) => {
+let ProductCarousel3ForLargerScreens = (props: { data: productsDataType }) => {
   let productsData = props.data;
   return (
     <div className="hidden lg:block  bg-white m-[1vw] p-[1vw] pb-[1.2vw]">

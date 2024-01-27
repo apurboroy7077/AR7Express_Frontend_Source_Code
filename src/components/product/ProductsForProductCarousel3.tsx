@@ -1,13 +1,8 @@
 import ar7id from "ar7id";
 import ProductCard from "./ProductCard";
+import { productsDataType } from "../../models/ProductsData";
 type propsType = {
-  data: {
-    name: string;
-    description: string;
-    price: number;
-    discountPercentage: number;
-    imageSrc: string;
-  }[];
+  data: productsDataType;
 };
 const ProductsForProductCarousel3 = (props: propsType) => {
   let productsData = props.data;

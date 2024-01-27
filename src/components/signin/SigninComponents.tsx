@@ -1,6 +1,8 @@
 import { useState } from "react";
-
-const SigninComponents = (props) => {
+type propsType = {
+  data: boolean;
+};
+const SigninComponents = (props: propsType) => {
   let shouldProceed = props.data;
   if (!shouldProceed) {
     return null;

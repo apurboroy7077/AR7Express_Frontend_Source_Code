@@ -1,10 +1,8 @@
-import { useState } from "react";
 import PopupMenubar from "./PopupMenubar";
 import OpenMenubar from "./OpenMenubar";
 import { Link } from "react-router-dom";
 
 const TheNavbar = () => {
-  let [isPopupMenuOpen, setIsPopupMenuOpen] = useState(false);
   let handleSearchBarFocus = () => {
     let theBlackDiv = document.getElementsByClassName(
       "background_filter_black_div"

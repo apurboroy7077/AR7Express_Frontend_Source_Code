@@ -1,5 +1,5 @@
 import ar7id from "ar7id";
-import { Link } from "react-router-dom";
+
 import TheHr from "../TheHr";
 import CartLargerScreenProductImage from "./CartLargerScreenProductImage";
 import CartLargerScreenProductInfo from "./CartLargerScreenProductInfo";
