@@ -58,3 +58,7 @@
     2. Updated Responsiveness for sign in/up page and also added show password facility for both of them.
     3. Had Some trouble opening menubar. When I open menubar , signin page gets smaller. Solved this problem by applying w-[100%] to root div in index.html
     4. Had Some Problems When Used Popup menubar to Go to another page. Fixed this by adding popup close function to every link.
+    5. Started to make single product details page.
+    6. Deviding ProductCarousel3ForLargerScreens to Smaller Components.
+    7. Adding Product Details page for smaller screens.
+19. Date 27/1/2024, Saturday
