@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import RatingOfProductDetails from "./RatingOfProductDetails";
 import AmazonsChoiceLogo from "./AmazonsChoiceLogo";
 import DeliveryDateInfo from "./DeliveryDateInfo";

@@ -1,12 +1,9 @@
-import ar7id from "ar7id";
 import { useEffect, useState } from "react";
+import ProductsOfCarousel1 from "./ProductsOfCarousel1";
 
 const TheCarousal1 = () => {
   let [currentImageIndex, setCurrentImageIndex] = useState(1);
-  let handleProductDivTouchEnd = (e: React.TouchEvent) => {
-    e.stopPropagation();
-    console.log("Propagate");
-  };
+
   let handleTouchEnd = () => {
     let currentImageIndex_ = currentImageIndex;
     currentImageIndex_ = currentImageIndex_ + 1;
@@ -22,6 +19,7 @@ const TheCarousal1 = () => {
       handleTouchEnd();
     }, 5000);
   }, [currentImageIndex]);
+
   return (
     <div
       className="w-full h-[300px] duration-1000 bg-cover bg-center relative lg:hidden"
@@ -37,25 +35,7 @@ const TheCarousal1 = () => {
       >
         New Year Sale
       </div>
-      <div className="flex gap-3 overflow-x-auto absolute bottom-0 max-w-full">
-        {Array.from({ length: 20 }).map(() => {
-          return (
-            <div
-              key={ar7id()}
-              className="bg-white min-w-[125px] rounded overflow-hidden shadow"
-              onTouchEnd={handleProductDivTouchEnd}
-            >
-              <div className="p-1">HeadPhones</div>
-              <div className="h-[130px] w-full">
-                <img
-                  src="/images/products/headphone.webp"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-            </div>
-          );
-        })}
-      </div>
+      <ProductsOfCarousel1 />
     </div>
   );
 };

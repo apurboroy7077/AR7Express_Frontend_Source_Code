@@ -69,3 +69,4 @@
     3. Initialized redux toolkit.
     4. Initialized Screen Size with redux toolkit.
     5. Making Product Details Page For Larger Screens.
+    6. Starting Implementing Logic to My Project.

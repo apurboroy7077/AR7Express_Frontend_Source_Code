@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { rootType, updateScreenWidth } from "../../configs/redux/screenSize";
+import { useDispatch } from "react-redux";
+import { updateScreenWidth } from "../../configs/redux/screenSize";
 
 const UpdateScreenSize = () => {
   let dispatch = useDispatch();
