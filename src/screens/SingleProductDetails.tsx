@@ -1,6 +1,7 @@
 import TheFooter from "../components/TheFooter";
 import TheNavbar from "../components/TheNavbar";
-import ProductDetailsSection from "../components/product/ProductDetailsSection";
+import ProductDetailsForLargerScreens from "../components/product/ProductDetailsForLargerScreens";
+import ProductDetailsSectionForSmallerScreens from "../components/product/ProductDetailsSectionForSmallerScreens";
 
 const SingleProductDetails = () => {
   return (
@@ -9,7 +10,8 @@ const SingleProductDetails = () => {
         <TheNavbar />
       </header>
       <main>
-        <ProductDetailsSection />
+        <ProductDetailsSectionForSmallerScreens /> {/* //FOR Small Screens */}
+        <ProductDetailsForLargerScreens /> {/* //FOR Larger Screens */}
       </main>
       <footer>
         <TheFooter />

@@ -62,4 +62,10 @@
     6. Deviding ProductCarousel3ForLargerScreens to Smaller Components.
     7. Adding Product Details page for smaller screens.
 19. Date 27/1/2024, Saturday
-    1.
+    1.Current was gone so could not do much development. Upgraded product details page at night for smaller screens.
+20. Date 28/1/2024, Sunday.
+    1. Develop product details page for larger Screens.
+    2. Initializing redux toolkit for better Development.
+    3. Initialized redux toolkit.
+    4. Initialized Screen Size with redux toolkit.
+    5. Making Product Details Page For Larger Screens.

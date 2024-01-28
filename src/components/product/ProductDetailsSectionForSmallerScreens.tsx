@@ -1,12 +1,21 @@
-import ar7id from "ar7id";
 import { Link } from "react-router-dom";
 import RatingOfProductDetails from "./RatingOfProductDetails";
 import AmazonsChoiceLogo from "./AmazonsChoiceLogo";
 import DeliveryDateInfo from "./DeliveryDateInfo";
 import QuantityOfProductInProductDetails from "./QuantityOfProductInProductDetails";
 import AddToCartInProductDetails from "./AddToCartInProductDetails";
+import { useSelector } from "react-redux";
+import { rootType } from "../../configs/redux/screenSize";
+import PriceInfo from "./PriceInfo";
+import ShippingAndImportFeeInfo from "./ShippingAndImportFeeInfo";
 
-const ProductDetailsSection = () => {
+const ProductDetailsSectionForSmallerScreens = () => {
+  let screenWidth = useSelector(
+    (state: rootType) => state.screenSize.screenWidth
+  );
+  if (screenWidth > 1023) {
+    return null;
+  }
   return (
     <>
       <div className="flex justify-between items-center p-2">
@@ -29,7 +38,7 @@ const ProductDetailsSection = () => {
         </span>
       </div>
       <div className="p-2">
-        <div>
+        <div className="flex justify-center">
           <img src="/images/products/digital_watch.jpg" />
         </div>
         <div className="text-center mt-1">
@@ -43,22 +52,8 @@ const ProductDetailsSection = () => {
           </span>
           <span className=" text-red-800 font-medium ml-2">Deal</span>
         </div>
-        <div className="mt-2">
-          <sup className="font-medium text-base">$</sup>
-          <span className=" text-2xl">{99}</span>
-          <span className="opacity-70 font-medium ml-2">
-            List Price:{" "}
-            <span className=" line-through cursor-pointer">${99}</span>
-          </span>
-        </div>
-        <div className="font-medium mt-2">
-          <span className="font-medium text-sm opacity-80">
-            {"$135.55 Shipping and Import fees in Bangladesh."}
-          </span>
-          <span className="ml-1 text-green-700 ">
-            <Link to="/">Details</Link>
-          </span>
-        </div>
+        <PriceInfo />
+        <ShippingAndImportFeeInfo />
         <DeliveryDateInfo />
         <div className="mt-2">
           <span>
@@ -81,4 +76,4 @@ const ProductDetailsSection = () => {
   );
 };
 
-export default ProductDetailsSection;
+export default ProductDetailsSectionForSmallerScreens;

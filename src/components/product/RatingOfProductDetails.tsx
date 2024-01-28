@@ -1,6 +1,6 @@
 const RatingOfProductDetails = () => {
   return (
-    <div className="text-xs">
+    <div className="text-xs lg:text-base">
       <span className="mr-1 font-medium">5.0</span>
       <span className="mr-1 font-medium text-orange-500">
         <i className="fa-solid fa-star" />
