@@ -70,3 +70,8 @@
     4. Initialized Screen Size with redux toolkit.
     5. Making Product Details Page For Larger Screens.
     6. Starting Implementing Logic to My Project.
+    7. Updated The Carousal1.tsx of Smaller Screens.
+21. Date 1/2/2024, Thursday.
+    1. Runed 3 days for leg injuri and Chandan's Wedding.
+22. Date 3/2/2024, Saturday.
+    1. Divided FashionInTrends.tsx into different Components.

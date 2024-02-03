@@ -14,7 +14,7 @@ const SmallerScreensProductCard1 = (props: propsType) => {
     >
       <div className="p-2 text-nowrap text-sm font-medium">{name}</div>
       <div className="h-[130px] w-full">
-        <img src={imageSrc} className="h-full w-full object-contain" />
+        <img src={imageSrc} className="h-full w-full " />
       </div>
     </div>
   );
