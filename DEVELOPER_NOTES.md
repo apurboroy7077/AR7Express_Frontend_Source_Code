@@ -75,3 +75,4 @@
     1. Runed 3 days for leg injuri and Chandan's Wedding.
 22. Date 3/2/2024, Saturday.
     1. Divided FashionInTrends.tsx into different Components.
+    2. Implemented Random Product Generating Functionality to FashionInTrends.tsx

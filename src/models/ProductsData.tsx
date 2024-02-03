@@ -7,7 +7,7 @@ let productsData = [
       "Et dolores ea tempor invidunt nonumy gubergren sanctus, dolor no sadipscing invidunt dolor dolore, amet sed sit takimata justo ut, lorem dolor sea consetetur ipsum, rebum takimata vero kasd stet est rebum diam, elitr sit tempor sit diam ipsum vero consetetur, ipsum tempor eirmod ipsum justo dolores dolore no. Tempor.",
     price: 74.95,
     discountPercentage: 49,
-    imageSrc: "/images/products/led_tv.jpg",
+    imageSrc: "/images/products/asus_monitor.jpg",
     theId: ar7id(),
   },
   {
