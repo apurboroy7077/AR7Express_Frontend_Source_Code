@@ -14,8 +14,7 @@ type propsType = {
   data: singleProductDataType;
 };
 const ProductDetailsForLargerScreens = (props: propsType) => {
-  let { price, discountPercentage, imageSrc, description } = props.data;
-  console.log(imageSrc);
+  let { name, price, discountPercentage, imageSrc, description } = props.data;
   let screenWidth = useSelector(
     (state: rootType) => state.screenSize.screenWidth
   );
@@ -31,9 +30,12 @@ const ProductDetailsForLargerScreens = (props: propsType) => {
       </div>
       <div className="p-3 flex justify-between">
         <div className="w-[35%]">
-          <img src={imageSrc} className="w-full" />
+          <img src={imageSrc} className="w-full h-[30vw] object-contain" />
         </div>
         <div className="w-[35%]">
+          <div className="">
+            <span className="text-lg font-bold text-green-600">{name}</span>
+          </div>
           <div>
             {/* Dedcription Here------------------------------------------------------------- */}
             <span className="font-medium">{description} </span>

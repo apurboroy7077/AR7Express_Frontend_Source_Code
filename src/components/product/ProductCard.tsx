@@ -6,7 +6,9 @@ type propsType = {
 };
 const ProductCard = (props: propsType) => {
   let { description, price, discountPercentage, imageSrc, theId } = props.data;
+  let shortenedDescription = description.slice(0, 35);
   let priceAfterDiscount = price - (price / 100) * discountPercentage;
+  priceAfterDiscount = Number(priceAfterDiscount.toFixed(2));
   let navigate = useNavigate();
   let handleClickOnProduct = () => {
     localStorage.setItem("ar7express_focused_product_id", theId);
@@ -39,7 +41,7 @@ const ProductCard = (props: propsType) => {
         </span>
       </div>
       <div className="font-medium text-[0.85vw] cursor-pointer">
-        {description}
+        {shortenedDescription}...
       </div>
     </div>
   );

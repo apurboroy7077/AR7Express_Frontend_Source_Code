@@ -80,3 +80,6 @@
 23. Date 4/2/2024, Sunday
     1. Added Functionality to Product Details page for smaller Screens.
     2. Added Functionality to go to Product Details Page when clicked on a Product in ProductCarousel3ForLargerScreens.tsx
+    3. Updating Fashionintrends2.tsx
+    4. working on GiveSpecificNumbersOfProductsData.tsx.
+    5. Added open product details page function in BooksSlider.tsx

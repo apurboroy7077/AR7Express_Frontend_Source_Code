@@ -1,5 +1,8 @@
 import Slider from "react-slick";
-
+import { GiveSpecificNumbersOfProductsDataFromCategory } from "./extra_functions/GiveSpecificNumbersOfProductsData";
+import BooksSliderSlide from "./BooksSliderSlide";
+import ar7id from "ar7id";
+let booksData = GiveSpecificNumbersOfProductsDataFromCategory(10, "book");
 let BooksSliderForLargeScreens = () => {
   const settings = {
     className: "slider variable-width",
@@ -23,33 +26,9 @@ let BooksSliderForLargeScreens = () => {
         Top Seller in Books for You
       </div>
       <Slider {...settings} className="">
-        <div className="mr-5 ml-5 ">
-          <img className="w-[8vw]" src="/images/products/book_1.jpg" />
-        </div>
-        <div className="mr-5 ml-5 ">
-          <img className="w-[8vw]" src="/images/products/book_2.jpg" />
-        </div>
-        <div className="mr-5 ml-5 ">
-          <img className="w-[8vw]" src="/images/products/book_3.jpg" />
-        </div>
-        <div className="mr-5 ml-5 ">
-          <img className="w-[8vw]" src="/images/products/book_1.jpg" />
-        </div>
-        <div className="mr-5 ml-5 ">
-          <img className="w-[8vw]" src="/images/products/book_2.jpg" />
-        </div>
-        <div className="mr-5 ml-5 ">
-          <img className="w-[8vw]" src="/images/products/book_3.jpg" />
-        </div>
-        <div className="mr-5 ml-5 ">
-          <img className="w-[8vw]" src="/images/products/book_1.jpg" />
-        </div>
-        <div className="mr-5 ml-5 ">
-          <img className="w-[8vw]" src="/images/products/book_2.jpg" />
-        </div>
-        <div className="mr-5 ml-5 ">
-          <img className="w-[8vw]" src="/images/products/book_3.jpg" />
-        </div>
+        {booksData.map((data) => {
+          return <BooksSliderSlide key={ar7id()} data={data} />;
+        })}
       </Slider>
     </div>
   );

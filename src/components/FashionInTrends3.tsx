@@ -16,7 +16,7 @@ const FashionInTrends3 = (props: propsType) => {
               <div>
                 <img
                   src={imageSrc}
-                  className="rounded w-full h-[20vw] object-cover"
+                  className="rounded w-full h-[20vw] object-cover object-center"
                 />
               </div>
               {/* <div className=" text-[1vw] font-medium text-nowrap">
