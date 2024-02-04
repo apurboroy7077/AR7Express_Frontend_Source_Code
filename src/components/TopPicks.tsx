@@ -1,4 +1,4 @@
-import ar7id from "ar7id";
+import TopPicksProducts from "./TopPicksProducts";
 
 type propsType = {
   data: {
@@ -10,29 +10,12 @@ type propsType = {
 };
 
 const TopPicks = (props: propsType) => {
-  let { title, productDescription, price, imageSrc } = props.data;
+  let { title } = props.data;
+
   return (
     <div className=" p-3 ">
       <div className=" font-bold">{title}</div>
-      <div className="md:grid md:grid-cols-2">
-        {Array.from({ length: 3 }).map(() => {
-          return (
-            <div className="mt-3 ml-3" key={ar7id()}>
-              <div className="flex">
-                <div className="min-w-[25%]">
-                  <img src={imageSrc} className="w-full" />
-                </div>
-                <div className="ml-3">
-                  <div className="  text-xs font-medium">
-                    {productDescription}
-                  </div>
-                  <div className="font-medium">{price}</div>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+      <TopPicksProducts />
     </div>
   );
 };

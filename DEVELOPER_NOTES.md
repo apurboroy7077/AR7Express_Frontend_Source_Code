@@ -83,3 +83,4 @@
     3. Updating Fashionintrends2.tsx
     4. working on GiveSpecificNumbersOfProductsData.tsx.
     5. Added open product details page function in BooksSlider.tsx
+    6. Updated TopPicks.tsx

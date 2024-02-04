@@ -109,6 +109,46 @@ let productsData = [
     theId: "todomodoid11",
     category: "book",
   },
+  {
+    name: "Audio Extension Cable",
+    description:
+      "Et dolores ea tempor invidunt nonumy gubergren sanctus, dolor no sadipscing invidunt dolor dolore, amet sed sit takimata justo ut, lorem dolor sea consetetur ipsum, rebum takimata vero kasd stet est rebum diam, elitr sit tempor sit diam ipsum vero consetetur, ipsum tempor eirmod ipsum justo dolores dolore no. Tempor.",
+    price: 59.7,
+    discountPercentage: 59,
+    imageSrc: "/images/products/audio_extension_cable.jpg",
+    theId: "todomodoid12",
+    category: "topPicks",
+  },
+  {
+    name: "Light Strip",
+    description:
+      "Et dolores ea tempor invidunt nonumy gubergren sanctus, dolor no sadipscing invidunt dolor dolore, amet sed sit takimata justo ut, lorem dolor sea consetetur ipsum, rebum takimata vero kasd stet est rebum diam, elitr sit tempor sit diam ipsum vero consetetur, ipsum tempor eirmod ipsum justo dolores dolore no. Tempor.",
+    price: 79.7,
+    discountPercentage: 32,
+    imageSrc: "/images/products/light_strip.jpg",
+    theId: "todomodoid13",
+    category: "topPicks",
+  },
+  {
+    name: "Computer Speakers",
+    description:
+      "Et dolores ea tempor invidunt nonumy gubergren sanctus, dolor no sadipscing invidunt dolor dolore, amet sed sit takimata justo ut, lorem dolor sea consetetur ipsum, rebum takimata vero kasd stet est rebum diam, elitr sit tempor sit diam ipsum vero consetetur, ipsum tempor eirmod ipsum justo dolores dolore no. Tempor.",
+    price: 81.7,
+    discountPercentage: 35,
+    imageSrc: "/images/products/computer_speakers.jpg",
+    theId: "todomodoid14",
+    category: "topPicks",
+  },
+  {
+    name: "Headphone Sony",
+    description:
+      "Et dolores ea tempor invidunt nonumy gubergren sanctus, dolor no sadipscing invidunt dolor dolore, amet sed sit takimata justo ut, lorem dolor sea consetetur ipsum, rebum takimata vero kasd stet est rebum diam, elitr sit tempor sit diam ipsum vero consetetur, ipsum tempor eirmod ipsum justo dolores dolore no. Tempor.",
+    price: 83.7,
+    discountPercentage: 32,
+    imageSrc: "/images/products/headphone_pick.jpg",
+    theId: "todomodoid15",
+    category: "topPicks",
+  },
 ];
 
 type singleProductDataType = {
