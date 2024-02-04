@@ -7,28 +7,29 @@ import { useSelector } from "react-redux";
 import { rootType } from "../../configs/redux/screenSize";
 import PriceInfo from "./PriceInfo";
 import ShippingAndImportFeeInfo from "./ShippingAndImportFeeInfo";
-
-const ProductDetailsSectionForSmallerScreens = () => {
+import { singleProductDataType } from "../../models/ProductsData";
+type propsType = {
+  data: singleProductDataType;
+};
+const ProductDetailsSectionForSmallerScreens = (props: propsType) => {
   let screenWidth = useSelector(
     (state: rootType) => state.screenSize.screenWidth
   );
   if (screenWidth > 1023) {
     return null;
   }
+  let { name, description, imageSrc, discountPercentage, price } = props.data;
+
   return (
     <>
       <div className="flex justify-between items-center p-2">
         <div>
-          <span className="font-medium text-green-700">Griddle Mini Maker</span>
+          <span className="font-medium text-green-700">{name}</span>
         </div>
         <RatingOfProductDetails />
       </div>
       <div className="p-2">
-        <span className="text-sm font-medium opacity-80">
-          Voluptua sit labore accusam invidunt eos eos, consetetur consetetur ea
-          ipsum dolor clita est est duo tempor. Vero dolore dolor diam nonumy
-          eos ea lorem. Sadipscing sadipscing ipsum voluptua justo.
-        </span>
+        <span className="text-sm font-medium opacity-80">{description}</span>
       </div>
       <div className="p-2 flex items-center">
         <AmazonsChoiceLogo />
@@ -38,7 +39,7 @@ const ProductDetailsSectionForSmallerScreens = () => {
       </div>
       <div className="p-2">
         <div className="flex justify-center">
-          <img src="/images/products/digital_watch.jpg" />
+          <img src={imageSrc} />
         </div>
         <div className="text-center mt-1">
           <span className="text-xs font-medium">900+ bought in past month</span>
@@ -47,12 +48,12 @@ const ProductDetailsSectionForSmallerScreens = () => {
       <div className="p-2">
         <div className="  ">
           <span className=" pt-1 pb-1 pl-2 pr-2 bg-red-800  text-white cursor-pointer">
-            {99}% off
+            {discountPercentage}% off
           </span>
           <span className=" text-red-800 font-medium ml-2">Deal</span>
         </div>
-        <PriceInfo />
-        <ShippingAndImportFeeInfo />
+        <PriceInfo data={{ price, discountPercentage }} />
+        <ShippingAndImportFeeInfo data={price} />
         <DeliveryDateInfo />
         <div className="mt-2">
           <span>

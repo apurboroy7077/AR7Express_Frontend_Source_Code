@@ -1,5 +1,3 @@
-import ar7id from "ar7id";
-
 let productsData = [
   {
     name: "Acer Monitor",
@@ -8,7 +6,7 @@ let productsData = [
     price: 74.95,
     discountPercentage: 49,
     imageSrc: "/images/products/asus_monitor.jpg",
-    theId: ar7id(),
+    theId: "todomodoid1",
   },
   {
     name: "Office Chair",
@@ -16,8 +14,8 @@ let productsData = [
       "Et dolores ea tempor invidunt nonumy gubergren sanctus, dolor no sadipscing invidunt dolor dolore, amet sed sit takimata justo ut, lorem dolor sea consetetur ipsum, rebum takimata vero kasd stet est rebum diam, elitr sit tempor sit diam ipsum vero consetetur, ipsum tempor eirmod ipsum justo dolores dolore no. Tempor.",
     price: 74.95,
     discountPercentage: 49,
-    imageSrc: "/images/products/digital_watch.jpg",
-    theId: ar7id(),
+    imageSrc: "/images/products/office_furniture.jpg",
+    theId: "todomodoid2",
   },
   {
     name: "Dining Table",
@@ -26,7 +24,7 @@ let productsData = [
     price: 74.95,
     discountPercentage: 49,
     imageSrc: "/images/products/dining.jpg",
-    theId: ar7id(),
+    theId: "todomodoid3",
   },
   {
     name: "Shirt Pant",
@@ -35,7 +33,7 @@ let productsData = [
     price: 74.95,
     discountPercentage: 49,
     imageSrc: "/images/products/red_shirt.jpg",
-    theId: ar7id(),
+    theId: "todomodoid4",
   },
   {
     name: "Teddy Bear",
@@ -44,7 +42,7 @@ let productsData = [
     price: 74.95,
     discountPercentage: 49,
     imageSrc: "/images/products/teddy_bear.jpg",
-    theId: ar7id(),
+    theId: "todomodoid5",
   },
   {
     name: "Shoe for Women",
@@ -53,7 +51,7 @@ let productsData = [
     price: 74.95,
     discountPercentage: 49,
     imageSrc: "/images/products/women_shoe.jpg",
-    theId: ar7id(),
+    theId: "todomodoid6",
   },
   {
     name: "Cloth",
@@ -62,7 +60,7 @@ let productsData = [
     price: 74.95,
     discountPercentage: 49,
     imageSrc: "/images/products/cloth.jpg",
-    theId: ar7id(),
+    theId: "todomodoid7",
   },
   {
     name: "Furniture",
@@ -71,7 +69,7 @@ let productsData = [
     price: 74.95,
     discountPercentage: 49,
     imageSrc: "/images/products/office_furniture.jpg",
-    theId: ar7id(),
+    theId: "todomodoid8",
   },
 ];
 

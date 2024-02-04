@@ -76,3 +76,6 @@
 22. Date 3/2/2024, Saturday.
     1. Divided FashionInTrends.tsx into different Components.
     2. Implemented Random Product Generating Functionality to FashionInTrends.tsx
+    3. Updated Product Details page for smaller screens.
+23. Date 4/2/2024, Sunday
+    1. Added Functionality to Product Details page for smaller Screens.

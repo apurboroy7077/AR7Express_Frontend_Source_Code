@@ -8,8 +8,12 @@ import DeliveryDateInfo from "./DeliveryDateInfo";
 import DeliverLocation from "./DeliverLocation";
 import QuantityOfProductInProductDetails from "./QuantityOfProductInProductDetails";
 import AddToCartInProductDetails from "./AddToCartInProductDetails";
-
-const ProductDetailsForLargerScreens = () => {
+import { singleProductDataType } from "../../models/ProductsData";
+type propsType = {
+  data: singleProductDataType;
+};
+const ProductDetailsForLargerScreens = (props: propsType) => {
+  let { price, discountPercentage } = props.data;
   let screenWidth = useSelector(
     (state: rootType) => state.screenSize.screenWidth
   );
@@ -21,7 +25,7 @@ const ProductDetailsForLargerScreens = () => {
       <div className="flex justify-between items-center p-3">
         <RatingOfProductDetails />
         <AmazonsChoiceLogo />
-        <PriceInfo />
+        <PriceInfo data={{ price, discountPercentage }} />
       </div>
       <div className="p-3 flex justify-between">
         <div className="w-[35%]">
@@ -39,9 +43,9 @@ const ProductDetailsForLargerScreens = () => {
             <RatingOfProductDetails />
           </div>
           <div>
-            <PriceInfo />
+            <PriceInfo data={{ price, discountPercentage }} />
           </div>
-          <ShippingAndImportFeeInfo />
+          <ShippingAndImportFeeInfo data={price} />
           <div>
             <span className="text-sm font-semibold opacity-80">
               Available at a lower price from other sellers that may not offer
@@ -62,7 +66,7 @@ const ProductDetailsForLargerScreens = () => {
               <span className=" text-2xl">{99}</span>
               <sup className="font-medium text-sm">65</sup>
             </div>
-            <ShippingAndImportFeeInfo />
+            <ShippingAndImportFeeInfo data={price} />
             <DeliveryDateInfo />
             <DeliverLocation />
             <QuantityOfProductInProductDetails />
