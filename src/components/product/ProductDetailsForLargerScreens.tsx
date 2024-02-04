@@ -9,11 +9,13 @@ import DeliverLocation from "./DeliverLocation";
 import QuantityOfProductInProductDetails from "./QuantityOfProductInProductDetails";
 import AddToCartInProductDetails from "./AddToCartInProductDetails";
 import { singleProductDataType } from "../../models/ProductsData";
+import PriceInfoForLargerScreens from "./PriceInfoForLargerScreens";
 type propsType = {
   data: singleProductDataType;
 };
 const ProductDetailsForLargerScreens = (props: propsType) => {
-  let { price, discountPercentage } = props.data;
+  let { price, discountPercentage, imageSrc, description } = props.data;
+  console.log(imageSrc);
   let screenWidth = useSelector(
     (state: rootType) => state.screenSize.screenWidth
   );
@@ -29,15 +31,12 @@ const ProductDetailsForLargerScreens = (props: propsType) => {
       </div>
       <div className="p-3 flex justify-between">
         <div className="w-[35%]">
-          <img src="/images/products/asus_monitor.jpg" className="w-full" />
+          <img src={imageSrc} className="w-full" />
         </div>
         <div className="w-[35%]">
           <div>
-            <span className="font-medium">
-              ASUS ROG Swift 32” 4K HDR Gaming Monitor - 144Hz DSC, UHD (3840 x
-              2160) PC Monitor, Mini-LED IPS with G-SYNC Ultimate, Local
-              Dimming, Ideal for Desktop and Computer Monitor Black - - PG32UQX
-            </span>
+            {/* Dedcription Here------------------------------------------------------------- */}
+            <span className="font-medium">{description} </span>
           </div>
           <div>
             <RatingOfProductDetails />
@@ -61,11 +60,7 @@ const ProductDetailsForLargerScreens = (props: propsType) => {
             className=" border-[black] border-[1px] w-[90%] p-3 pb-5 rounded h-fit"
             style={{ boxShadow: "2px 2px 5px black" }}
           >
-            <div>
-              <sup className="font-medium text-sm">$</sup>
-              <span className=" text-2xl">{99}</span>
-              <sup className="font-medium text-sm">65</sup>
-            </div>
+            <PriceInfoForLargerScreens data={price} />
             <ShippingAndImportFeeInfo data={price} />
             <DeliveryDateInfo />
             <DeliverLocation />

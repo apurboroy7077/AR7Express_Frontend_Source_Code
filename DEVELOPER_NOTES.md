@@ -79,3 +79,4 @@
     3. Updated Product Details page for smaller screens.
 23. Date 4/2/2024, Sunday
     1. Added Functionality to Product Details page for smaller Screens.
+    2. Added Functionality to go to Product Details Page when clicked on a Product in ProductCarousel3ForLargerScreens.tsx

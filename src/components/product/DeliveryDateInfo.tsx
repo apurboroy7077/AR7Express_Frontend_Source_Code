@@ -8,7 +8,7 @@ const DeliveryDateInfo = () => {
     day: "numeric",
   } as Intl.DateTimeFormatOptions;
   let finalDate = currentDate.toLocaleDateString("en-US", options);
-  console.log(finalDate);
+
   return (
     <div className=" mt-2">
       <span className="text-sm font-medium opacity-90">

@@ -1,19 +1,15 @@
 import ar7id from "ar7id";
 import { useNavigate } from "react-router-dom";
+import { singleProductDataType } from "../../models/ProductsData";
 type propsType = {
-  data: {
-    name: string;
-    description: string;
-    price: number;
-    discountPercentage: number;
-    imageSrc: string;
-  };
+  data: singleProductDataType;
 };
 const ProductCard = (props: propsType) => {
-  let { description, price, discountPercentage, imageSrc } = props.data;
+  let { description, price, discountPercentage, imageSrc, theId } = props.data;
   let priceAfterDiscount = price - (price / 100) * discountPercentage;
   let navigate = useNavigate();
   let handleClickOnProduct = () => {
+    localStorage.setItem("ar7express_focused_product_id", theId);
     navigate("/single_product_details");
   };
   return (
