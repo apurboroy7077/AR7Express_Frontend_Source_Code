@@ -1,4 +1,8 @@
-const AddToCartInProductDetails = () => {
+type propsType = {
+  data: string;
+};
+const AddToCartInProductDetails = (props: propsType) => {
+  console.log(props);
   return (
     <div className="mt-2">
       <span>

@@ -84,3 +84,5 @@
     4. working on GiveSpecificNumbersOfProductsData.tsx.
     5. Added open product details page function in BooksSlider.tsx
     6. Updated TopPicks.tsx
+24. Date 5/2/2024, Monday.
+    1. Updated Product Details Page, Now the Quantity Will remain the Same even if Someone reload the Page.

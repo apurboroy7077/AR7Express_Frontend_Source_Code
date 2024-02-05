@@ -14,7 +14,8 @@ type propsType = {
   data: singleProductDataType;
 };
 const ProductDetailsForLargerScreens = (props: propsType) => {
-  let { name, price, discountPercentage, imageSrc, description } = props.data;
+  let { name, price, discountPercentage, imageSrc, description, theId } =
+    props.data;
   let screenWidth = useSelector(
     (state: rootType) => state.screenSize.screenWidth
   );
@@ -66,8 +67,8 @@ const ProductDetailsForLargerScreens = (props: propsType) => {
             <ShippingAndImportFeeInfo data={price} />
             <DeliveryDateInfo />
             <DeliverLocation />
-            <QuantityOfProductInProductDetails />
-            <AddToCartInProductDetails />
+            <QuantityOfProductInProductDetails data={theId} />
+            <AddToCartInProductDetails data={theId} />
           </div>
         </div>
       </div>

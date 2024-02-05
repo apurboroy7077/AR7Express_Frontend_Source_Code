@@ -18,7 +18,8 @@ const ProductDetailsSectionForSmallerScreens = (props: propsType) => {
   if (screenWidth > 1023) {
     return null;
   }
-  let { name, description, imageSrc, discountPercentage, price } = props.data;
+  let { name, description, imageSrc, discountPercentage, price, theId } =
+    props.data;
 
   return (
     <>
@@ -69,8 +70,8 @@ const ProductDetailsSectionForSmallerScreens = (props: propsType) => {
         <div className="mt-2">
           <span className="text-green-700 font-medium">In Stock</span>
         </div>
-        <QuantityOfProductInProductDetails />
-        <AddToCartInProductDetails />
+        <QuantityOfProductInProductDetails data={theId} />
+        <AddToCartInProductDetails data={theId} />
       </div>
     </>
   );
