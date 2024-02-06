@@ -13,6 +13,12 @@ type actionType = {
 type actionTypeOnReload = {
   payload: productsQuantityTypeInCart;
 };
+type actionTypeOnIncreementOrDecreement = {
+  payload: string;
+};
+type actionTypeOnDelete = {
+  payload: string;
+};
 let cartSlice = createSlice({
   name: "cartState",
   initialState: {
@@ -38,9 +44,62 @@ let cartSlice = createSlice({
     updateCartOnPageReload: (state, action: actionTypeOnReload) => {
       state.productsQuantity = action.payload;
     },
+    incrementCartProductQuantity: (
+      state,
+      action: actionTypeOnIncreementOrDecreement
+    ) => {
+      let theId = action.payload;
+      let theProduct = state.productsQuantity.filter(
+        (product) => theId == product.theId
+      )[0];
+      theProduct.quantity++;
+      localStorage.setItem(
+        "ar7express_cart_page_data",
+        JSON.stringify(state.productsQuantity)
+      );
+    },
+    decrementCartProductQuantity: (
+      state,
+      action: actionTypeOnIncreementOrDecreement
+    ) => {
+      let theId = action.payload;
+      let theProduct = state.productsQuantity.filter(
+        (product) => theId == product.theId
+      )[0];
+      if (theProduct.quantity > 1) {
+        theProduct.quantity--;
+        localStorage.setItem(
+          "ar7express_cart_page_data",
+          JSON.stringify(state.productsQuantity)
+        );
+      }
+    },
+    deleteFromCart: (state, action: actionTypeOnDelete) => {
+      let theId = action.payload;
+      state.productsQuantity = state.productsQuantity.filter(
+        (product) => theId != product.theId
+      );
+      localStorage.setItem(
+        "ar7express_cart_page_data",
+        JSON.stringify(state.productsQuantity)
+      );
+    },
   },
 });
 let cartSliceReducer = cartSlice.reducer;
-let { addToCart, updateCartOnPageReload } = cartSlice.actions;
-export { cartSliceReducer, addToCart, updateCartOnPageReload };
+let {
+  addToCart,
+  updateCartOnPageReload,
+  incrementCartProductQuantity,
+  decrementCartProductQuantity,
+  deleteFromCart,
+} = cartSlice.actions;
+export {
+  cartSliceReducer,
+  addToCart,
+  updateCartOnPageReload,
+  incrementCartProductQuantity,
+  decrementCartProductQuantity,
+  deleteFromCart,
+};
 export type { productsQuantityTypeInCart };

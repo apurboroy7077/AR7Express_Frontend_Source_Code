@@ -1,4 +1,13 @@
+import { useSelector } from "react-redux";
+import { stateType } from "../../configs/redux/store";
+
 const SendAsAGiftSectionForSmallerScreens = () => {
+  let cartProductsData = useSelector(
+    (state: stateType) => state.cartSliceReducer.productsQuantity
+  );
+  if (cartProductsData.length < 1) {
+    return null;
+  }
   return (
     <div className="flex items-center mb-[0.7rem]">
       <span>

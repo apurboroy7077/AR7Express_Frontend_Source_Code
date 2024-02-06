@@ -93,3 +93,6 @@
     2. Installed React Toastify and Add the <ToastContainer> to App.tsx
     3. The return null should be used in react below all other logic in a component or it will give Error.
     4. Added Add to Cart Functionality in Product Details Page.
+    5. Tried to Update Menubar but Failed.
+    6. Used UseMemo to Stop Unneccessary rerenders of Cart Products.
+    7. Almost Finished All the Cart Functionality For Small Screen.

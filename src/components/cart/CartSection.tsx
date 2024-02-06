@@ -1,16 +1,15 @@
 import TheHr from "../TheHr";
-import CartProduct from "./CartProduct";
 import Checkout from "./Checkout";
 import TotalBills from "./TotalBills";
 import CartProductLargeScreen from "./CartProductLargeScreen";
 import CartInternationalCustomerPurchased from "./CartInternationalCustomerPurchased";
-import productsData from "./../../models/ProductsData.json";
 import CartCheckoutSectionLargeScreen from "./CartCheckoutSectionLargeScreen";
 
 import EmptyCartMessage from "./EmptyCartMessage";
 import EmptyCartMessageLargeScreen from "./EmptyCartMessageLargeScreen";
 import CartSubtotalForLargeScreen from "./CartSubtotalForLargeScreen";
 import SendAsAGiftSectionForSmallerScreens from "./SendAsAGiftSectionForSmallerScreens";
+import CartProducts from "./CartProducts";
 
 const CartSection = () => {
   return (
@@ -21,16 +20,14 @@ const CartSection = () => {
         <Checkout />
         <SendAsAGiftSectionForSmallerScreens />
         <TheHr />
-        <CartProduct />
-        <CartProduct />
-        <CartProduct />
+        <CartProducts />
         <div className="mt-5 ">
           <div className="mb-4 lg:mb-5">
             <span className="text-[1.1rem] font-semibold">
               New international customers purchased
             </span>
           </div>
-          <CartInternationalCustomerPurchased data={productsData} />
+          <CartInternationalCustomerPurchased />
         </div>
       </div>
       <div className="hidden lg:flex justify-between bg-slate-200 p-[1vw] ">
@@ -68,7 +65,7 @@ const CartSection = () => {
                 New international customers purchased
               </span>
             </div>
-            <CartInternationalCustomerPurchased data={productsData} />
+            <CartInternationalCustomerPurchased />
           </div>
         </div>
       </div>
