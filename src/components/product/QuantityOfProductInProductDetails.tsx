@@ -7,8 +7,19 @@ type propsType = {
   data: string;
 };
 const QuantityOfProductInProductDetails = (props: propsType) => {
-  let [quantity, setQuantity] = useState(0);
   let theId = props.data;
+  let doesExist = false;
+  let productsInCart = useSelector(
+    (state: stateType) => state.cartSliceReducer.productsQuantity
+  );
+  let matchingProductsInCart = productsInCart.filter(
+    (product) => product.theId == theId
+  );
+  if (matchingProductsInCart.length > 0) {
+    doesExist = true;
+  }
+  let [quantity, setQuantity] = useState(0);
+
   let quantityOfProducts = useSelector(
     (state: stateType) =>
       state.updateQuantityOfProductsInProductDetails.quantityOfProducts
@@ -30,6 +41,10 @@ const QuantityOfProductInProductDetails = (props: propsType) => {
       updateQuantityOfProductsInProductDetails({ theId, quantity: theQuantity })
     );
   };
+  // Checking If Already Exists on Cart or Not, Return if Exists----------------------------------------------------------------
+  if (doesExist) {
+    return null;
+  }
   return (
     <div className="mt-2 relative ">
       <span className="absolute top-[0.58rem] left-3 font-medium">

@@ -86,3 +86,10 @@
     6. Updated TopPicks.tsx
 24. Date 5/2/2024, Monday.
     1. Updated Product Details Page, Now the Quantity Will remain the Same even if Someone reload the Page.
+    2. Next Task Implement Add to Cart Functionality in Products Details Page.
+    3. Caught Fever at Night So Could not do Much Development that day.
+25. Date 6/2/2024, Tuesday.
+    1. Continuing Developing Add to Cart Functionality.
+    2. Installed React Toastify and Add the <ToastContainer> to App.tsx
+    3. The return null should be used in react below all other logic in a component or it will give Error.
+    4. Added Add to Cart Functionality in Product Details Page.
