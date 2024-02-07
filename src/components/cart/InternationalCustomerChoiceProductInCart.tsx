@@ -30,7 +30,7 @@ const InternationalCustomerChoiceProductInCart = (props: propsType) => {
           className="w-[10rem] h-[5rem] lg:min-w-[10vw] lg:max-w-[10vw] lg:h-[5vw] object-cover "
         />
       </div>
-      <div className="">
+      <div className="lg:w-[10vw] ">
         <div className="font-medium text-[0.85rem]">{name}</div>
         <div>
           <sup className="lg:text-[0.7vw]">$</sup>

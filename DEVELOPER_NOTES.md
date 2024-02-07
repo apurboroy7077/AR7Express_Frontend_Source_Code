@@ -101,3 +101,4 @@
     2. Next Task, Implement Logic of Cart Page For Larger Screens.
     3. Finished Adding Increment, Decrement, Delete Functionality to Cart Page For both Smaller and Larger Screens.
     4. Fixed Issues of SigninPage.
+    5. Updated Styling in 'New international customers purchased' section in Cart Page.
