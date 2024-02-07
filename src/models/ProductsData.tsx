@@ -161,5 +161,14 @@ type singleProductDataType = {
   category: string;
 };
 type productsDataType = singleProductDataType[];
+// type productValueType =
+//   | "name"
+//   | "description"
+//   | "price"
+//   | "discountPercentage"
+//   | "imageSrc"
+//   | "theId"
+//   | "category";
+
 export { productsData };
 export type { productsDataType, singleProductDataType };

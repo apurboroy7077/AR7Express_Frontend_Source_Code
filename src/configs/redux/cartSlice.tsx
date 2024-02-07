@@ -4,6 +4,10 @@ type productsQuantityTypeInCart = {
   theId: string;
   quantity: number;
 }[];
+type singleProductDataTypeInCart = {
+  theId: string;
+  quantity: number;
+};
 type actionType = {
   payload: {
     theId: string;
@@ -35,7 +39,6 @@ let cartSlice = createSlice({
       } else {
         doesExist[0].quantity = action.payload.quantity;
       }
-      console.log("Hello");
       localStorage.setItem(
         "ar7express_cart_page_data",
         JSON.stringify(state.productsQuantity)
@@ -102,4 +105,4 @@ export {
   decrementCartProductQuantity,
   deleteFromCart,
 };
-export type { productsQuantityTypeInCart };
+export type { productsQuantityTypeInCart, singleProductDataTypeInCart };

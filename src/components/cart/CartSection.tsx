@@ -1,7 +1,6 @@
 import TheHr from "../TheHr";
 import Checkout from "./Checkout";
 import TotalBills from "./TotalBills";
-import CartProductLargeScreen from "./CartProductLargeScreen";
 import CartInternationalCustomerPurchased from "./CartInternationalCustomerPurchased";
 import CartCheckoutSectionLargeScreen from "./CartCheckoutSectionLargeScreen";
 
@@ -10,6 +9,7 @@ import EmptyCartMessageLargeScreen from "./EmptyCartMessageLargeScreen";
 import CartSubtotalForLargeScreen from "./CartSubtotalForLargeScreen";
 import SendAsAGiftSectionForSmallerScreens from "./SendAsAGiftSectionForSmallerScreens";
 import CartProducts from "./CartProducts";
+import CartProductsOfLargeScreens from "./CartProductsOfLargeScreens";
 
 const CartSection = () => {
   return (
@@ -42,8 +42,7 @@ const CartSection = () => {
             </div>
             <TheHr />
             <div>
-              <CartProductLargeScreen />
-              <CartProductLargeScreen />
+              <CartProductsOfLargeScreens />
             </div>
             <CartSubtotalForLargeScreen />
           </div>

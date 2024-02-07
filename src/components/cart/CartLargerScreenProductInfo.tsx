@@ -1,14 +1,16 @@
 import { Link } from "react-router-dom";
 import CartProductButtonsForLargerScreens from "./CartProductButtonsForLargerScreens";
-
-const CartLargerScreenProductInfo = () => {
+import GiveProductBasedOnId from "../extra_functions/GiveProductBasedOnId";
+type propsType = {
+  theId: string;
+};
+const CartLargerScreenProductInfo = (props: propsType) => {
+  let { theId } = props;
+  let productsData = GiveProductBasedOnId(theId);
+  let { description } = productsData;
   return (
     <div className="">
-      <div className="text-sm font-medium mb-[0.15rem]">
-        LG 34WP60C-B 34-Inch 21:9 Curved UltraWide QHD (3440x1440) VA Display
-        with sRGB 99% Color Gamut and HDR 10, AMD FreeSync Premium and 3-Side
-        Virtually Borderless Screen Curved QHD Tilt,Black
-      </div>
+      <div className="text-sm font-medium mb-[0.15rem]">{description} </div>
       <div className="leading-[0.9rem] mb-[0.15rem]">
         <span className="text-[0.8rem] font-medium opacity-85">
           500+ bought in past month
@@ -26,7 +28,7 @@ const CartLargerScreenProductInfo = () => {
           <Link to="/">Learn More</Link>
         </span>
       </div>
-      <CartProductButtonsForLargerScreens />
+      <CartProductButtonsForLargerScreens theId={theId} />
     </div>
   );
 };

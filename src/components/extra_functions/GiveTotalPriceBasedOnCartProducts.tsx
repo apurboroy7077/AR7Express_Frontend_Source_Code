@@ -16,6 +16,7 @@ const GiveTotalPriceBasedOnCartProducts = (
     let finalPrice = FinalPrice(price, discountPercentage) * quantity;
     totalPrice = totalPrice + finalPrice;
   }
+  totalPrice = Number(totalPrice.toFixed(2));
   return totalPrice;
 };
 

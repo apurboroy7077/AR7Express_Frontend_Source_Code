@@ -1,9 +1,20 @@
+import { useSelector } from "react-redux";
+import { stateType } from "../../configs/redux/store";
+import GiveTotalPriceBasedOnCartProducts from "../extra_functions/GiveTotalPriceBasedOnCartProducts";
+
 const CartCheckoutSectionLargeScreen = () => {
+  let cartProductsData = useSelector(
+    (state: stateType) => state.cartSliceReducer.productsQuantity
+  );
+  let totalNumberOfProducts = cartProductsData.length;
+  let totalPrice = GiveTotalPriceBasedOnCartProducts(cartProductsData);
   return (
     <div className=" bg-white p-[1vw] ">
       <div className="">
-        <span className="text-[1.1rem]">Subtotal (6 items): </span>
-        <span className="font-bold text-[1.1rem]">$2,030.94</span>
+        <span className="text-[1.1rem]">
+          Subtotal ({totalNumberOfProducts} items):{" "}
+        </span>
+        <span className="font-bold text-[1.1rem]">${totalPrice}</span>
       </div>
       <div className="flex items-center mb-[0.7rem]">
         <span>

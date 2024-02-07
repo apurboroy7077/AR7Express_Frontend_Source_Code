@@ -37,7 +37,7 @@ const AddToCartInProductDetails = (props: propsType) => {
     }
     // Returning and Giving a message if the Quantity is 0--------------------------------------------------
     if (quantity < 1) {
-      toast("Quantity Must me More than 0");
+      toast.error("Quantity Must me More than 0");
       return;
     }
     dispatch(addToCart({ theId, quantity }));

@@ -1,8 +1,12 @@
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { stateType } from "../../configs/redux/store";
 
 const EmptyCartMessageLargeScreen = () => {
-  let test = 0;
-  if (test == 0) {
+  let cartProductsData = useSelector(
+    (state: stateType) => state.cartSliceReducer.productsQuantity
+  );
+  if (cartProductsData.length > 0) {
     return null;
   }
   return (

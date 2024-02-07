@@ -4,6 +4,9 @@ import ar7id from "ar7id";
 import GiveProductBasedOnId from "../extra_functions/GiveProductBasedOnId";
 import FinalPrice from "../extra_functions/FinalPrice";
 import GiveFractionalValues from "../extra_functions/GiveFractionalValues";
+import { useSelector } from "react-redux";
+import { stateType } from "../../configs/redux/store";
+import GiveRequiredValue from "../extra_functions/GiveRequiredValue";
 type propsType = {
   data: {
     theId: string;
@@ -11,10 +14,17 @@ type propsType = {
   };
 };
 const CartProduct = (props: propsType) => {
-  let { theId, quantity } = props.data;
+  let { theId } = props.data;
+  let cartData = useSelector(
+    (state: stateType) => state.cartSliceReducer.productsQuantity
+  );
+  let quantity = GiveRequiredValue(cartData, theId, "quantity") as number;
   let productData = GiveProductBasedOnId(theId);
   let { imageSrc, description, discountPercentage, price } = productData;
+  let listPrice = price * quantity;
+  listPrice = Number(listPrice.toFixed(2));
   let finalPrice = FinalPrice(price, discountPercentage);
+  finalPrice = finalPrice * quantity;
   let fractionalValuesOfPrice = GiveFractionalValues(finalPrice);
   let [displayDescription, setDisplayDescription] = useState(description);
   let handleResize = () => {
@@ -64,7 +74,7 @@ const CartProduct = (props: propsType) => {
               <sup>{fractionalValuesOfPrice.afterFraction}</sup>
             </span>
             <span className="text-[0.83rem] opacity-70 font-medium">
-              List Price: <span className=" line-through">${price}</span>
+              List Price: <span className=" line-through">${listPrice}</span>
             </span>
           </div>
           <div className="font-medium text-[0.80rem] text-green-700">
