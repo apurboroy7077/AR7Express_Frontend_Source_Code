@@ -1,16 +1,18 @@
 import { useState } from "react";
-type propsType = {
-  data: boolean;
-};
-const SigninComponents = (props: propsType) => {
-  let shouldProceed = props.data;
-  if (!shouldProceed) {
-    return null;
-  }
+import { useSelector } from "react-redux";
+import { stateType } from "../../configs/redux/store";
+
+const SigninComponents = () => {
+  let openedField = useSelector(
+    (state: stateType) => state.signInAndUp.openedField
+  );
   let [showPassword, setShowPassword] = useState(false);
   let handleClickOnCheckboxToShowPassword = () => {
     setShowPassword(!showPassword);
   };
+  if (openedField != "signIn") {
+    return null;
+  }
   return (
     <form>
       <div className="mt-3">
@@ -20,6 +22,7 @@ const SigninComponents = (props: propsType) => {
         <div className="mt-1">
           <input
             className="border-[1px] border-[grey] w-full h-[3rem] pl-2 pr-2 rounded "
+            type="text"
             required
           />
         </div>
@@ -32,6 +35,7 @@ const SigninComponents = (props: propsType) => {
           <input
             type={showPassword ? "text" : "password"}
             className="border-[1px] border-[grey] w-full h-[3rem] pl-2 pr-2 rounded "
+            autoComplete="current-password"
             required
           />
         </div>
@@ -41,7 +45,7 @@ const SigninComponents = (props: propsType) => {
           <input
             type="checkbox"
             className="block w-[1.2rem] h-[1.2rem]"
-            onClick={handleClickOnCheckboxToShowPassword}
+            onChange={handleClickOnCheckboxToShowPassword}
           />
         </span>
         <span className="ml-2 text-sm font-medium opacity-90">

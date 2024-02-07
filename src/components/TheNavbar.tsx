@@ -1,8 +1,9 @@
 import PopupMenubar from "./PopupMenubar";
 import OpenMenubar from "./OpenMenubar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const TheNavbar = () => {
+  let navigate = useNavigate();
   let handleSearchBarFocus = () => {
     let theBlackDiv = document.getElementsByClassName(
       "background_filter_black_div"
@@ -20,6 +21,9 @@ const TheNavbar = () => {
   };
   let handleClickOnLargeScreenMenuIcon = () => {
     OpenMenubar();
+  };
+  let handleClickOnSignInOrUp = () => {
+    navigate("/signin");
   };
   return (
     <>
@@ -79,7 +83,10 @@ const TheNavbar = () => {
               <div className="font-medium">Bangla</div>
             </div>
             {/* Sign in for Large Devices------------------------------------------------------------------------------------------------------------------------ */}
-            <div className=" pl-5 pr-5 hidden lg:block">
+            <div
+              className=" pl-5 pr-5 hidden lg:block"
+              onClick={handleClickOnSignInOrUp}
+            >
               <div className="text-nowrap leading-[18px] font-medium">
                 Hello, Sign In!
               </div>

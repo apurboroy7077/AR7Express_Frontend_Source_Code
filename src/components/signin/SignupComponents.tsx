@@ -1,16 +1,18 @@
 import { useState } from "react";
-type propsType = {
-  data: boolean;
-};
-const SignupComponents = (props: propsType) => {
-  let shouldProceed = props.data;
-  if (!shouldProceed) {
-    return null;
-  }
+import { useSelector } from "react-redux";
+import { stateType } from "../../configs/redux/store";
+
+const SignupComponents = () => {
+  let openedField = useSelector(
+    (state: stateType) => state.signInAndUp.openedField
+  );
   let [showPassword, setShowPassword] = useState(false);
   let handleClickOnCheckboxToShowPassword = () => {
     setShowPassword(!showPassword);
   };
+  if (openedField != "signUp") {
+    return null;
+  }
   return (
     <form>
       <div className="mt-3">
@@ -54,7 +56,7 @@ const SignupComponents = (props: propsType) => {
             type="checkbox"
             className="block w-[1.2rem] h-[1.2rem]"
             checked={showPassword}
-            onClick={handleClickOnCheckboxToShowPassword}
+            onChange={handleClickOnCheckboxToShowPassword}
           />
         </span>
         <span className="ml-2 text-sm font-medium opacity-90">

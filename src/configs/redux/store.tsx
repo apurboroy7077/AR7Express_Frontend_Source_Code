@@ -5,6 +5,7 @@ import {
   productQuantityStateType,
 } from "./productQuantityInProductDetails";
 import { cartSliceReducer, productsQuantityTypeInCart } from "./cartSlice";
+import { fieldType, signInAndUpSliceReducer } from "./signIInAndUpSlice";
 
 let store = configureStore({
   reducer: {
@@ -12,6 +13,7 @@ let store = configureStore({
     updateQuantityOfProductsInProductDetails:
       productQuantityInProductDetailsSliceReducer,
     cartSliceReducer: cartSliceReducer,
+    signInAndUp: signInAndUpSliceReducer,
   },
 });
 // Type of State ---------------------------------------------------------------------------
@@ -24,6 +26,9 @@ type stateType = {
   };
   cartSliceReducer: {
     productsQuantity: productsQuantityTypeInCart;
+  };
+  signInAndUp: {
+    openedField: fieldType;
   };
 };
 export { store };

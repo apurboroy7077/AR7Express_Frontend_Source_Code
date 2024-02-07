@@ -100,3 +100,4 @@
     1. Added Go to Cart Functionality to "Added to Cart" button on Product Details Page.
     2. Next Task, Implement Logic of Cart Page For Larger Screens.
     3. Finished Adding Increment, Decrement, Delete Functionality to Cart Page For both Smaller and Larger Screens.
+    4. Fixed Issues of SigninPage.

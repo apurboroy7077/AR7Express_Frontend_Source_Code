@@ -1,19 +1,17 @@
-import { useState } from "react";
 import SigninComponents from "./SigninComponents";
 import SignupComponents from "./SignupComponents";
+import { useDispatch, useSelector } from "react-redux";
+import { stateType } from "../../configs/redux/store";
+import { changeField } from "../../configs/redux/signIInAndUpSlice";
 
 const SigninSection = () => {
-  let [isSignUpComponents, setIsSignUpComponents] = useState(false);
-  let [isSignInComponents, setIsSignInComponents] = useState(true);
+  let dispatch = useDispatch();
   let handleIsCreateAccountInputChange = () => {
-    if (isSignUpComponents) {
-      setIsSignUpComponents(false);
-      setIsSignInComponents(true);
-    } else {
-      setIsSignUpComponents(true);
-      setIsSignInComponents(false);
-    }
+    dispatch(changeField());
   };
+  let openedField = useSelector(
+    (state: stateType) => state.signInAndUp.openedField
+  );
 
   return (
     <div className=" bg-[#F6F6F6] mb-5 min-w-full ">
@@ -30,13 +28,14 @@ const SigninSection = () => {
           <div className="hidden lg:block mb-2">
             <span className=" text-[1.3rem] font-medium">Welcome</span>
           </div>
+          {/* This is the Sign Up Section---------------------------------------------------------------------------------*/}
           <div className="flex items-start ">
             <span>
               <input
                 type="radio"
                 className=" block h-[1.3rem] w-[1.3rem]"
-                checked={isSignUpComponents}
-                onClick={handleIsCreateAccountInputChange}
+                checked={openedField == "signUp"}
+                onChange={handleIsCreateAccountInputChange}
               />
             </span>
             <span>
@@ -46,14 +45,15 @@ const SigninSection = () => {
               </span>
             </span>
           </div>
-          <SignupComponents data={isSignUpComponents} />
+          <SignupComponents />
+          {/* THIS IS THE SIGNIN SECTION----------------------------------------------------------------------------------------------- */}
           <div className="flex items-start mt-3">
             <span>
               <input
                 type="radio"
                 className=" block h-[1.3rem] w-[1.3rem]"
-                checked={isSignInComponents}
-                onClick={handleIsCreateAccountInputChange}
+                checked={openedField == "signIn"}
+                onChange={handleIsCreateAccountInputChange}
               />
             </span>
             <span>
@@ -63,7 +63,7 @@ const SigninSection = () => {
               </span>
             </span>
           </div>
-          <SigninComponents data={isSignInComponents} />
+          <SigninComponents />
         </div>
       </div>
     </div>
