@@ -96,3 +96,5 @@
     5. Tried to Update Menubar but Failed.
     6. Used UseMemo to Stop Unneccessary rerenders of Cart Products.
     7. Almost Finished All the Cart Functionality For Small Screen.
+26. Date 7/2/2024, Wednesday.
+    1. Added Go to Cart Functionality to "Added to Cart" button on Product Details Page.

@@ -2,11 +2,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { stateType } from "../../configs/redux/store";
 import { toast } from "react-toastify";
 import { addToCart } from "../../configs/redux/cartSlice";
+import { useNavigate } from "react-router-dom";
 
 type propsType = {
   data: string;
 };
 const AddToCartInProductDetails = (props: propsType) => {
+  let navigate = useNavigate();
   let theId = props.data;
   let dispatch = useDispatch();
   let cartProducts = useSelector(
@@ -40,7 +42,9 @@ const AddToCartInProductDetails = (props: propsType) => {
     }
     dispatch(addToCart({ theId, quantity }));
   };
-
+  let handleClickOnAddedToCartButton = () => {
+    navigate("/cart");
+  };
   return (
     <div className="mt-2">
       {!doesExist && (
@@ -55,7 +59,10 @@ const AddToCartInProductDetails = (props: propsType) => {
       )}
       {doesExist && (
         <span>
-          <button className="w-full bg-[#FFA41C] rounded-lg p-2 active:scale-[0.95]">
+          <button
+            className="w-full bg-[#FFA41C] rounded-lg p-2 active:scale-[0.95]"
+            onClick={handleClickOnAddedToCartButton}
+          >
             Added to Cart{" "}
             <span className="ml-1">
               <i className="fa-regular fa-square-check fa-bounce" />
