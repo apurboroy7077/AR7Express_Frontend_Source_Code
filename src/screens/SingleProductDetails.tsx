@@ -4,8 +4,13 @@ import TheNavbar from "../components/TheNavbar";
 import ProductDetailsForLargerScreens from "../components/product/ProductDetailsForLargerScreens";
 import ProductDetailsSectionForSmallerScreens from "../components/product/ProductDetailsSectionForSmallerScreens";
 import { productsData } from "../models/ProductsData";
+import { useSelector } from "react-redux";
+import { stateType } from "../configs/redux/store";
 
 const SingleProductDetails = () => {
+  let screenSize = useSelector(
+    (state: stateType) => state.screenSize.screenWidth
+  );
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -19,10 +24,14 @@ const SingleProductDetails = () => {
         <TheNavbar />
       </header>
       <main>
-        <ProductDetailsSectionForSmallerScreens data={productData} />{" "}
-        {/* //FOR Small Screens */}
-        <ProductDetailsForLargerScreens data={productData} />{" "}
-        {/* //FOR Larger Screens */}
+        {/* //FOR Small Screens-------------------------------------------------------------------------- */}
+        {screenSize < 1024 && (
+          <ProductDetailsSectionForSmallerScreens data={productData} />
+        )}
+        {/* //FOR Larger Screens------------------------------------------------------------------------------- */}
+        {screenSize > 1023 && (
+          <ProductDetailsForLargerScreens data={productData} />
+        )}
       </main>
       <footer>
         <TheFooter />

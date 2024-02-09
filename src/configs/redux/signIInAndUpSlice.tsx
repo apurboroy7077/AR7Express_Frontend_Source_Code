@@ -16,9 +16,12 @@ const signIInAndUpSlice = createSlice({
         state.openedField = "signIn";
       }
     },
+    setSpecificField: (state, action: actionTypeInChangeField) => {
+      state.openedField = action.payload;
+    },
   },
 });
 let signInAndUpSliceReducer = signIInAndUpSlice.reducer;
-let { changeField } = signIInAndUpSlice.actions;
-export { signInAndUpSliceReducer, changeField };
+let { changeField, setSpecificField } = signIInAndUpSlice.actions;
+export { signInAndUpSliceReducer, changeField, setSpecificField };
 export type { fieldType, actionTypeInChangeField };
