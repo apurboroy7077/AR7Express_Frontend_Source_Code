@@ -106,3 +106,5 @@
     1. Divided Homepage.tsx into 2 sections, 1 for small screens and 1 for large screens.
     2. Also Did the same thing with cart page and single product details page. Now when the screen is small, only small code will be rendered for these pages. Same applies for bigger screens.
     3. Added Functionality to signin and create account buttons in Largerscreenhomepage.
+28. 12/2/2024, Monday.
+    1. Added Functions to Signin/up page in a way that we do not have to use UseState Anymore. Now we can Directly Extract the values form form event.

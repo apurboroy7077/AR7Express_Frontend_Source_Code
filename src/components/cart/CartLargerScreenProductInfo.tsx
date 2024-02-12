@@ -23,7 +23,7 @@ const CartLargerScreenProductInfo = (props: propsType) => {
         <span>
           <input type="checkbox" />
         </span>
-        <span className="ml-1 text-sm font-medium">This is a Gift Gift</span>
+        <span className="ml-1 text-sm font-medium">This is a Gift</span>
         <span className="ml-1 text-sm font-medium text-green-700">
           <Link to="/">Learn More</Link>
         </span>

@@ -13,8 +13,17 @@ const SigninComponents = () => {
   if (openedField != "signIn") {
     return null;
   }
+  let handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    let formData = new FormData(e.currentTarget);
+    let emailOrPhone = formData.get("emailOrPhone");
+    let password = formData.get("password");
+    let packagedProducts = { emailOrPhone, password };
+    console.log(packagedProducts);
+    alert(JSON.stringify(packagedProducts));
+  };
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="mt-3">
         <div>
           <label className="font-medium">Email or Phone Number</label>
@@ -23,6 +32,7 @@ const SigninComponents = () => {
           <input
             className="border-[1px] border-[grey] w-full h-[3rem] pl-2 pr-2 rounded "
             type="text"
+            name="emailOrPhone"
             required
           />
         </div>
@@ -36,6 +46,7 @@ const SigninComponents = () => {
             type={showPassword ? "text" : "password"}
             className="border-[1px] border-[grey] w-full h-[3rem] pl-2 pr-2 rounded "
             autoComplete="current-password"
+            name="password"
             required
           />
         </div>

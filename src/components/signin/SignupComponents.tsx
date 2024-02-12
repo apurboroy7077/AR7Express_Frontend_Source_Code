@@ -13,14 +13,24 @@ const SignupComponents = () => {
   if (openedField != "signUp") {
     return null;
   }
+  let handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    let formData = new FormData(e.currentTarget);
+    let fullName = formData.get("fullName");
+    let emailOrPhone = formData.get("emailOrPhone");
+    let password = formData.get("password");
+    let packagedProducts = { fullName, emailOrPhone, password };
+    alert(JSON.stringify(packagedProducts));
+  };
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="mt-3">
         <div>
           <label className="font-medium">First and Last Name</label>
         </div>
         <div className="mt-1">
           <input
+            name="fullName"
             type="text"
             className="border-[1px] border-[grey] w-full h-[3rem] pl-2 pr-2 rounded "
             required
@@ -33,6 +43,7 @@ const SignupComponents = () => {
         </div>
         <div className="mt-1">
           <input
+            name="emailOrPhone"
             className="border-[1px] border-[grey] w-full h-[3rem] pl-2 pr-2 rounded "
             required
           />
@@ -44,6 +55,7 @@ const SignupComponents = () => {
         </div>
         <div className="mt-1">
           <input
+            name="password"
             type={showPassword ? "text" : "password"}
             className="border-[1px] border-[grey] w-full h-[3rem] pl-2 pr-2 rounded "
             required
