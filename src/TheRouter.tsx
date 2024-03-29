@@ -3,6 +3,7 @@ import Homepage from "./screens/Homepage";
 import Cartpage from "./screens/Cartpage";
 import SigninPage from "./screens/SigninPage";
 import SingleProductDetails from "./screens/SingleProductDetails";
+import ShowDigits from "./screens/Interview3";
 
 const TheRouter = () => {
   return (
@@ -16,6 +17,7 @@ const TheRouter = () => {
             path="/single_product_details"
             element={<SingleProductDetails />}
           />
+          <Route path="/interview3" element={<ShowDigits />} />
         </Routes>
       </BrowserRouter>
     </>

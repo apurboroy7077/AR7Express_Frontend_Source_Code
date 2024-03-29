@@ -58,8 +58,8 @@ const TheNavbar = () => {
               onFocus={handleSearchBarFocus}
               onBlur={handleSearchBarFocusOut}
             />
-            <select className="text-black absolute bg-slate-300 left-0 top-[4px] rounded-l-lg p-[8.5px]">
-              <option className="bg-white">Hi</option>
+            <select className="text-black absolute bg-slate-300 left-[-3px] top-[4px] rounded-l-lg py-[10px] px-[5px]">
+              <option className="bg-white">All</option>
               <option className="bg-white">Hi</option>
             </select>
             <i className="fa-solid fa-magnifying-glass absolute right-0 top-1 bg-red-500 p-3 active:scale-110 rounded cursor-pointer" />
